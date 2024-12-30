@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="A3MrLZEihvPOb3K5G4R41H" LanguageVersion="2024.6.7-0305-g04c2aff42c" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="A3MrLZEihvPOb3K5G4R41H" LanguageVersion="2024.6.7-0301-gd769b48db0" Version="0.128">
   <NugetDependency Id="KeM6GyYfp1NLMdcxrWKv8S" Location="VL.CoreLib" IsFriend="true" Version="2024.6.7-0301-gd769b48db0" />
   <Patch Id="OPTHzu3GjIGNfTrkvahywi">
     <Canvas Id="RveISoue0hDPMJRZ8Lcb3C" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
 
-    ************************ CreateWidget (Adaptive) ************************
+    ************************ CreateValueEditor (Adaptive) ************************
 
 -->
-      <Node Name="CreateWidget (Adaptive)" Bounds="698,198,80,80" Id="EAs6bLTMZ0eORPfsuws7lU">
+      <Node Name="CreateValueEditor (Adaptive)" Bounds="698,198,80,80" Id="EAs6bLTMZ0eORPfsuws7lU">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
         <Patch Id="A0AJ9uoUZhEMBruCr23jBN" IsGeneric="true" ExplicitTypeParameters="T">
           <Pin Id="Hm2ALXqfIrwMvxzuWuGHPM" Name="Output" Kind="OutputPin">
             <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-              <Choice Kind="TypeFlag" Name="IWidget" />
+              <Choice Kind="TypeFlag" Name="IValueEditor" />
               <p:TypeArguments>
                 <TypeReference>
                   <Choice Kind="TypeFlag" Name="T" />
@@ -29,10 +29,10 @@
       </Node>
       <!--
 
-    ************************ IWidget (NonGeneric) ************************
+    ************************ IValueEditor (NonGeneric) ************************
 
 -->
-      <Node Name="IWidget (NonGeneric)" Bounds="438,393" Id="TRnpvrH3iyEMZzwaStojuS">
+      <Node Name="IValueEditor (NonGeneric)" Bounds="438,393" Id="TRnpvrH3iyEMZzwaStojuS">
         <p:NodeReference>
           <Choice Kind="InterfaceDefinition" />
         </p:NodeReference>
@@ -79,9 +79,9 @@
                 <Choice Kind="TypeFlag" Name="IStyle" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="HJDKz2Ssr9TPKKkMSUeVxy" Name="Widget Context" Kind="InputPin">
+            <Pin Id="HJDKz2Ssr9TPKKkMSUeVxy" Name="Editor Context" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget____.vl">
-                <Choice Kind="TypeFlag" Name="WidgetContext" />
+                <Choice Kind="TypeFlag" Name="ValueEditorContext" />
               </p:TypeAnnotation>
             </Pin>
           </Patch>
@@ -416,10 +416,10 @@
       </Node>
       <!--
 
-    ************************ Widget (Dynamic) ************************
+    ************************ ValueEditor (Dynamic) ************************
 
 -->
-      <Node Name="Widget (Dynamic)" Bounds="445,526" Id="HjLwgMgqprEPwb2SRpTLLs">
+      <Node Name="ValueEditor (Dynamic)" Bounds="445,526" Id="HjLwgMgqprEPwb2SRpTLLs">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -462,7 +462,7 @@
                       <ControlPoint Id="POqbUfXv3kXLetmg2VT9B0" Bounds="804,286" Alignment="Top" />
                       <ControlPoint Id="PhBtDTqUUZQLZVaVcM2hwf" Bounds="764,286" Alignment="Top">
                         <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget.vl">
-                          <Choice Kind="TypeFlag" Name="AdaptiveWidget" />
+                          <Choice Kind="TypeFlag" Name="AdaptiveValueEditor" />
                           <p:TypeArguments>
                             <TypeReference>
                               <Choice Kind="TypeFlag" Name="Object" />
@@ -472,7 +472,7 @@
                       </ControlPoint>
                       <ControlPoint Id="ByXosuBYaaEOdOrCbALofQ" Bounds="804,315" Alignment="Bottom">
                         <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-                          <Choice Kind="TypeFlag" Name="IWidget (NonGeneric)" />
+                          <Choice Kind="TypeFlag" Name="IValueEditor (NonGeneric)" />
                         </p:TypeAnnotation>
                       </ControlPoint>
                     </Node>
@@ -493,7 +493,7 @@
                     <Node Bounds="776,443,109,26" Id="QQ814SO9iGUMYWQtDWC7pA">
                       <p:NodeReference LastCategoryFullName="Main.Widget (DynamicPerValue)" LastDependency="editable widget__channelsagai_n__.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="ClassType" Name="Widget (DynamicPerValue)" NeedsToBeDirectParent="true" />
+                        <CategoryReference Kind="ClassType" Name="ValueEditor (DynamicPerValue)" NeedsToBeDirectParent="true" />
                         <Choice Kind="OperationCallFlag" Name="Create" />
                       </p:NodeReference>
                       <Pin Id="PM3fGCwq3QdNahAJa7ncTO" Name="Output" Kind="StateOutputPin" />
@@ -526,9 +526,9 @@
               <ControlPoint Id="A8ZIyJPj1dvOGZg3dxo4JY" Bounds="551,146" Alignment="Top" />
             </Node>
             <Node Bounds="807,702,216,26" Id="QiBtY8CLFWVPhex9Rx3oVh">
-              <p:NodeReference LastCategoryFullName="Main.IWidget (NonGeneric)" LastDependency="editable widget.vl">
+              <p:NodeReference LastCategoryFullName="Main.IValueEditor (NonGeneric)" LastDependency="editable widget.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="InterfaceTypeFlag" Name="IWidget (NonGeneric)" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="InterfaceTypeFlag" Name="IValueEditor (NonGeneric)" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="UpdateNonGeneric" />
               </p:NodeReference>
               <Pin Id="PM6rlC6LK7UPeZx9pcx7Jg" Name="Input" Kind="StateInputPin" />
@@ -538,7 +538,7 @@
               <Pin Id="KCnCgjSonNNL6CC1j1MPal" Name="Label" Kind="InputPin" />
               <Pin Id="MgOpqVIVWPdMcknQ3uwCGJ" Name="Style" Kind="InputPin" />
               <Pin Id="IbayjibnMAePo9mRUvfaHg" Name="Context" Kind="OutputPin" />
-              <Pin Id="Sn7gaiDYtxFPEwsCk7Tvto" Name="Widget Context" Kind="InputPin" />
+              <Pin Id="Sn7gaiDYtxFPEwsCk7Tvto" Name="Editor Context" Kind="InputPin" />
             </Node>
             <ControlPoint Id="KyGOSWp0TRtN9Sk03dh9nv" Bounds="850,589" />
             <ControlPoint Id="OWBNq6AS8huMURYoeZixY8" Bounds="925,636" />
@@ -584,7 +584,7 @@
             <Pin Id="DofHGLz2MpJM4Bn8HPgkFv" Name="Channel" Kind="InputPin" />
             <Pin Id="KwKu5DjqDnMOgj2z5IrcNS" Name="Label" Kind="InputPin" />
             <Pin Id="TdlSlfBrqOeQNCJagbjjWs" Name="Style" Kind="InputPin" />
-            <Pin Id="IPcj7lOU9zVMlwAmKhMhP0" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="IPcj7lOU9zVMlwAmKhMhP0" Name="Editor Context" Kind="InputPin" />
             <Pin Id="EoLngbaFWu3M3EveX8GL0k" Name="Fixed Type" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="UQJoblRYp6rPZn5YXyonlt">
@@ -628,20 +628,20 @@
       </Node>
       <!--
 
-    ************************ AdaptiveWidget ************************
+    ************************ AdaptiveValueEditor ************************
 
 -->
-      <Node Name="AdaptiveWidget" Aspects="Advanced" Bounds="454,282" Id="NJu2hTEAuGBPFmZRIbdRKO">
+      <Node Name="AdaptiveValueEditor" Aspects="Advanced" Bounds="454,282" Id="NJu2hTEAuGBPFmZRIbdRKO">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="editable widget__.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
           <TypeReference LastCategoryFullName="Main" LastDependency="editable widget__.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget (NonGeneric)" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor (NonGeneric)" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="KEwZZj7NC8JLkys5gKKNYD" IsGeneric="true" ExplicitTypeParameters="T">
@@ -649,7 +649,7 @@
             <Node Bounds="462,50,77,19" Id="TkJqLxJEJlgQPnyiFm0MT6">
               <p:NodeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="CreateWidget" />
+                <Choice Kind="OperationCallFlag" Name="CreateValueEditor" />
               </p:NodeReference>
               <Pin Id="KyphcZzcEfKPrbMiFeWiHz" Name="Output" Kind="OutputPin" />
             </Node>
@@ -676,9 +676,9 @@
                 <Patch Id="JOp4R91g87gNxJe2rLWy0m" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="TUTH5UDxINdMCgpt3yQpJp" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="607,383,125,26" Id="CKFkAhnNjw2Oa7yy1HSPlj">
-                  <p:NodeReference LastCategoryFullName="Main.IWidget" LastDependency="editable widget.vl">
+                  <p:NodeReference LastCategoryFullName="Main.IValueEditor" LastDependency="editable widget.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="InterfaceTypeFlag" Name="IWidget" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="InterfaceTypeFlag" Name="IValueEditor" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="Update" />
                   </p:NodeReference>
                   <Pin Id="TQUzcp8YBceL7JvdJQuesY" Name="Input" Kind="StateInputPin" />
@@ -688,7 +688,7 @@
                   <Pin Id="Ea4QqFm6n61QaQaHQXZWIR" Name="Style" Kind="InputPin" />
                   <Pin Id="U1iB42kU85kOy66luMQO0Z" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="V185Ywow05qMMmQFMtDhfi" Name="Context" Kind="OutputPin" />
-                  <Pin Id="BRvrN9EkI9dNGnnBRCBcTI" Name="Widget Context" Kind="InputPin" />
+                  <Pin Id="BRvrN9EkI9dNGnnBRCBcTI" Name="Editor Context" Kind="InputPin" />
                 </Node>
               </Patch>
               <ControlPoint Id="HtykLYrVV2SPv5h5IwgfHB" Bounds="532,431" Alignment="Bottom" />
@@ -722,7 +722,7 @@
             <Node Bounds="973,353,125,26" Id="AHLpClxAjuqPxMKFKNOQoq">
               <p:NodeReference LastCategoryFullName="Main.AdaptiveWidget" LastDependency="editable widget__.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="ClassType" Name="AdaptiveWidget" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="ClassType" Name="AdaptiveValueEditor" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
               <Pin Id="JlLJPBSwnYaOtzNtS0nuN6" Name="Input" Kind="StateInputPin" />
@@ -732,7 +732,7 @@
               <Pin Id="NfOs4NS514xMT7Cro6ZfgK" Name="Style" Kind="InputPin" />
               <Pin Id="PTxL2hdRAVNPHFAaotAaPX" Name="Output" Kind="StateOutputPin" />
               <Pin Id="FvHVi8QWQZiNway6uWaa0A" Name="Context" Kind="OutputPin" />
-              <Pin Id="Lga0uLlBheaMzrMPB4SDP0" Name="Widget Context" Kind="InputPin" />
+              <Pin Id="Lga0uLlBheaMzrMPB4SDP0" Name="Editor Context" Kind="InputPin" />
             </Node>
             <ControlPoint Id="U5yljYqDrcTOfKNPS4GUeK" Bounds="730,294" />
             <ControlPoint Id="CXvwJzMyl4PLG4UkiwV2TP" Bounds="1127,320" />
@@ -755,11 +755,11 @@
             <Pin Id="C2sjYSQkh4RP3XtD8YanHZ" Name="Label" Kind="InputPin" />
             <Pin Id="TGN05L8NjKTLRh3PaUIcn1" Name="Style" Kind="InputPin" />
             <Pin Id="C03g37qViadLVTcTEaxbdY" Name="Context" Kind="OutputPin" />
-            <Pin Id="KgCdlcMnZdPN8UjfYOM80I" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="KgCdlcMnZdPN8UjfYOM80I" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <Slot Id="E0reL6T1iXqL10dyFJ9Jbe" Name="w">
             <p:TypeAnnotation p:Type="TypeReference" LastCategoryFullName="Main" LastDependency="editable widget.vl">
-              <Choice Kind="TypeFlag" Name="IWidget" />
+              <Choice Kind="TypeFlag" Name="IValueEditor" />
               <p:TypeArguments>
                 <TypeParameterReference Name="T" />
               </p:TypeArguments>
@@ -788,7 +788,7 @@
             <Pin Id="MqYTDNtdYegMB1brUcoHon" Name="Label" Kind="InputPin" />
             <Pin Id="J4LYe1Dxp6ILAn7QQYte97" Name="Style" Kind="InputPin" />
             <Pin Id="LgIZj4tG67wMyoqMzUxYwp" Name="Context" Kind="OutputPin" />
-            <Pin Id="QFXE4iQ57BgPlHKETg4EBM" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="QFXE4iQ57BgPlHKETg4EBM" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <Link Id="UMvGIbP1L6iPU18u2F9BNN" Ids="MqYTDNtdYegMB1brUcoHon,BZfMdWuYZNlPgHxpwOshma" IsHidden="true" />
           <Link Id="Q4dKDLbRTF4OfyfPmqefh5" Ids="J4LYe1Dxp6ILAn7QQYte97,BNVTOWINKDUN2ef7EUzeDn" IsHidden="true" />
@@ -817,10 +817,10 @@
       </Node>
       <!--
 
-    ************************ IWidget ************************
+    ************************ IValueEditor ************************
 
 -->
-      <Node Name="IWidget" Bounds="413,219" Id="ITxEJlRNdCWO6K7L6AveFz">
+      <Node Name="IValueEditor" Bounds="413,219" Id="ITxEJlRNdCWO6K7L6AveFz">
         <p:NodeReference>
           <Choice Kind="InterfaceDefinition" />
         </p:NodeReference>
@@ -872,9 +872,9 @@
                 <Choice Kind="TypeFlag" Name="IStyle" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="I3VnkQxghRUMQZFLJifCEL" Name="Widget Context" Kind="InputPin">
+            <Pin Id="I3VnkQxghRUMQZFLJifCEL" Name="Editor Context" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget____.vl">
-                <Choice Kind="TypeFlag" Name="WidgetContext" />
+                <Choice Kind="TypeFlag" Name="ValueEditorContext" />
               </p:TypeAnnotation>
             </Pin>
           </Patch>
@@ -999,17 +999,17 @@
       </Overlay>
       <!--
 
-    ************************ ObjectWidget ************************
+    ************************ ObjectEditor ************************
 
 -->
-      <Node Name="ObjectWidget" Bounds="250,1999" Id="J0Gh8aqfPEkMLrkrpt50kr">
+      <Node Name="ObjectEditor" Bounds="250,1999" Id="J0Gh8aqfPEkMLrkrpt50kr">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="editable widget__.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="QvEMYLulKwgOLUoSaEdHXp" IsGeneric="true" ExplicitTypeParameters="T">
@@ -1096,7 +1096,7 @@
                 <Node Bounds="386,0,105,19" Id="S5xHCHsPETvM6ymNuMKFw4">
                   <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widget__.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="NullWidget" />
+                    <Choice Kind="ProcessAppFlag" Name="NullEditor" />
                   </p:NodeReference>
                   <Pin Id="HQE4g4lNvjmP2N9VwXnX8H" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="MjB3UNdsMgCMuvBGaj6nFS" Name="Context" Kind="InputPin" />
@@ -1210,7 +1210,7 @@
                         <Node Bounds="748,426,54,19" Id="T74ZeGzlZr0NGqjk5ec5Nr">
                           <p:NodeReference LastCategoryFullName="Main.EditableVLObjectWidget" LastDependency="editable widget.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <CategoryReference Kind="ClassType" Name="ObjectWidget" NeedsToBeDirectParent="true" />
+                            <CategoryReference Kind="ClassType" Name="ObjectEditor" NeedsToBeDirectParent="true" />
                             <Choice Kind="OperationCallFlag" Name="IsVisible" />
                           </p:NodeReference>
                           <Pin Id="DeSU7inUzqGPlnuq23ouqO" Name="Input" Kind="InputPin" />
@@ -1269,7 +1269,7 @@
                     <Node Bounds="500,893,105,26" Id="QjEzqg2xSdfMfnGPTgOOkm">
                       <p:NodeReference LastCategoryFullName="Main.ObjectWidgetCore" LastDependency="editable widget____.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="ClassType" Name="ObjectWidgetCore" NeedsToBeDirectParent="true" />
+                        <CategoryReference Kind="ClassType" Name="ObjectEditorCore" NeedsToBeDirectParent="true" />
                         <Choice Kind="OperationCallFlag" Name="Update" />
                       </p:NodeReference>
                       <Pin Id="CUq3f1OIMsqOwf6mhfoWvw" Name="Input" Kind="InputPin" />
@@ -1278,7 +1278,7 @@
                       <Pin Id="MUWJ8VkrVJDNmWLhiq3Frt" Name="Properties" Kind="InputPin" />
                       <Pin Id="TSTmqtJX5PDMt2XUQRzKrr" Name="Output" Kind="OutputPin" />
                       <Pin Id="OuojTnf3klnPxEaQHD9Gmg" Name="Style" Kind="InputPin" />
-                      <Pin Id="MTwVljCcnAKMz5lYG4iYMq" Name="Widget Context" Kind="InputPin" />
+                      <Pin Id="MTwVljCcnAKMz5lYG4iYMq" Name="Editor Context" Kind="InputPin" />
                     </Node>
                   </Patch>
                   <ControlPoint Id="CGqdNtq5j0vO6BtILHVdXW" Bounds="502,843" Alignment="Top" />
@@ -1332,7 +1332,7 @@
                         <Node Bounds="574,1145,105,26" Id="NpstlSgckpiPJEktFJKikh">
                           <p:NodeReference LastCategoryFullName="Main.ObjectWidgetCore" LastDependency="editable widget____.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <CategoryReference Kind="ClassType" Name="ObjectWidgetCore" NeedsToBeDirectParent="true" />
+                            <CategoryReference Kind="ClassType" Name="ObjectEditorCore" NeedsToBeDirectParent="true" />
                             <Choice Kind="OperationCallFlag" Name="Update" />
                           </p:NodeReference>
                           <Pin Id="HMEI2VsNmamOiTsOs2nV7I" Name="Input" Kind="InputPin" />
@@ -1341,9 +1341,10 @@
                           <Pin Id="KODi6T6XPtjPq0Idf8ZC6T" Name="Properties" Kind="InputPin" />
                           <Pin Id="BIBZmVVVacVLoee4BFRYvS" Name="Output" Kind="OutputPin" />
                           <Pin Id="IgKbTg92hOFOrDGkKUCgWO" Name="Style" Kind="InputPin" />
-                          <Pin Id="N7MuBMVgG6UQdlwr6iNj8z" Name="Widget Context" Kind="InputPin" />
+                          <Pin Id="N7MuBMVgG6UQdlwr6iNj8z" Name="Editor Context" Kind="InputPin" />
                         </Node>
                       </Patch>
+                      <Pin Id="QjgJeJTsRaEO0eX52Jpcek" Name="Strip" Kind="InputPin" />
                     </Node>
                     <Node Bounds="566,1043,47,26" Id="Ml7jqVmP5t6OVocB4GC8s1">
                       <p:NodeReference LastCategoryFullName="Primitive.Optional" LastDependency="VL.CoreLib.vl">
@@ -1362,7 +1363,7 @@
                 <Node Bounds="500,733,98,19" Id="T9KtUGriPTSQDhig6rO3QY">
                   <p:NodeReference LastCategoryFullName="Main.ObjectWidget" LastDependency="editable widget___.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="ObjectWidgetCore" />
+                    <Choice Kind="ProcessAppFlag" Name="ObjectEditorCore" />
                   </p:NodeReference>
                   <Pin Id="JPjLKuKZzBiP7CgelmomeB" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="Uxu9pFqcvn4MPHehRurJdy" Name="Output" Kind="OutputPin" />
@@ -1404,9 +1405,9 @@
             <Pin Id="VJaeIXil62zMm9dGDzMBqC" Name="Label" Kind="InputPin" />
             <Pin Id="DfIuRa7qmBPPob7SWoxlo0" Name="Style" Kind="InputPin" />
             <Pin Id="A461PQ8SOCnOXPKyo6lzI9" Name="Context" Kind="OutputPin" />
-            <Pin Id="AcrET8iXgQ9QLVjYWpwhSK" Name="Widget Context" Kind="InputPin">
+            <Pin Id="AcrET8iXgQ9QLVjYWpwhSK" Name="Editor Context" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget____.vl">
-                <Choice Kind="TypeFlag" Name="WidgetContext" />
+                <Choice Kind="TypeFlag" Name="ValueEditorContext" />
               </p:TypeAnnotation>
             </Pin>
           </Patch>
@@ -1571,17 +1572,17 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Object) ************************
+    ************************ CreateValueEditor (Object) ************************
 
 -->
-      <Node Name="CreateWidget (Object)" Bounds="517,1975,123,89" Id="IQ1GW0xkhHdOHYtVchvjeH">
+      <Node Name="CreateValueEditor (Object)" Bounds="517,1975,123,89" Id="IQ1GW0xkhHdOHYtVchvjeH">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
         <Patch Id="ULNVaPqq7k1MrsETDAtT2g" IsGeneric="true">
           <Pin Id="UOxTX4lCIO9NsC6kcjCJSO" Name="Output" Kind="OutputPin">
             <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget__.vl">
-              <Choice Kind="TypeFlag" Name="IWidget" />
+              <Choice Kind="TypeFlag" Name="IValueEditor" />
             </p:TypeAnnotation>
           </Pin>
           <ControlPoint Id="UIUUYtSI8MvM00zkzAJS8G" Bounds="531,2047" />
@@ -1589,7 +1590,7 @@
           <Node Bounds="529,1998,87,26" Id="CaONYtnGd0jN3taLKVComa">
             <p:NodeReference LastCategoryFullName="Main.ObjectWidget" LastDependency="editable widget__bug__.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="ObjectWidget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="ObjectEditor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="BrXiMZUHAvDPmtyWfXVqzg" Name="Output" Kind="StateOutputPin" />
@@ -1600,10 +1601,10 @@
       </Node>
       <!--
 
-    ************************ NullWidget ************************
+    ************************ NullEditor ************************
 
 -->
-      <Node Name="NullWidget" Bounds="734,568" Id="I8RgUJKlpeDLY0b2rt7lDv">
+      <Node Name="NullEditor" Bounds="734,568" Id="I8RgUJKlpeDLY0b2rt7lDv">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
@@ -1674,10 +1675,10 @@
       </Node>
       <!--
 
-    ************************ ObjectWidgetCore (Internal) ************************
+    ************************ ObjectEditorCore (Internal) ************************
 
 -->
-      <Node Name="ObjectWidgetCore (Internal)" Bounds="250,2047" Id="SCrLFHrChNhLiCO0FhGycn">
+      <Node Name="ObjectEditorCore (Internal)" Bounds="250,2047" Id="SCrLFHrChNhLiCO0FhGycn">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -1744,14 +1745,14 @@
                   <Node Bounds="847,817,105,19" Id="JP78zXiTSCjPlPsp9aiYVp">
                     <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widgets.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="ProcessAppFlag" Name="Widget (Dynamic)" />
+                      <Choice Kind="ProcessAppFlag" Name="ValueEditor (Dynamic)" />
                     </p:NodeReference>
                     <Pin Id="AV3erVuOthJP1IpJr1Cdnk" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="Cw0I81RM7eBOYakr81XalS" Name="Context" Kind="InputPin" />
                     <Pin Id="SOUxlKTMRXdPhkZC1vXlQK" Name="Channel" Kind="InputPin" />
                     <Pin Id="BjEntkBA7dBPqFpZODLD8E" Name="Label" Kind="InputPin" />
                     <Pin Id="PrGbT7lDAh4QAxPZgZanPN" Name="Style" Kind="InputPin" />
-                    <Pin Id="PxEdj1dXRiVLcX5UnCKrFg" Name="Widget Context" Kind="InputPin" />
+                    <Pin Id="PxEdj1dXRiVLcX5UnCKrFg" Name="Editor Context" Kind="InputPin" />
                     <Pin Id="GBR0QeGCPi7P1WTnbwMfRT" Name="Output" Kind="OutputPin" />
                     <Pin Id="F8hzkz3zujcMuQvyys3ALO" Name="Context" Kind="OutputPin" />
                     <Pin Id="C4C70xx6TinMmvdQwVpGQj" Name="Fixed Type" Kind="InputPin" />
@@ -1784,10 +1785,10 @@
                       </p:TypeArguments>
                     </p:TypeAnnotation>
                   </Pad>
-                  <Node Bounds="986,601,125,26" Id="IxfVAaFU0ncNA1Zx2IRQuO">
-                    <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widgets.vl">
+                  <Node Bounds="986,601,125,19" Id="IxfVAaFU0ncNA1Zx2IRQuO">
+                    <p:NodeReference LastCategoryFullName="Main.ValueEditorContext" LastDependency="ValueEditors.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <FullNameCategoryReference ID="Main.WidgetContext" />
+                      <CategoryReference Kind="ClassType" Name="ValueEditorContext" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="SynchronizationContext" />
                     </p:NodeReference>
                     <Pin Id="OK005OSXsj0Pmxx9hWrmsc" Name="Input" Kind="StateInputPin" />
@@ -1833,9 +1834,9 @@
                       <Choice Kind="TypeFlag" Name="IStyle" />
                     </p:TypeAnnotation>
                   </Pin>
-                  <Pin Id="GrUGjY4YYu9NeRM3KvUKpT" Name="Widget Context" Kind="InputPin">
+                  <Pin Id="GrUGjY4YYu9NeRM3KvUKpT" Name="Editor Context" Kind="InputPin">
                     <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget__channelsagain__.vl">
-                      <Choice Kind="TypeFlag" Name="WidgetContext" />
+                      <Choice Kind="TypeFlag" Name="ValueEditorContext" />
                     </p:TypeAnnotation>
                   </Pin>
                   <Pin Id="IFPI1ybI6xUOpMElkEDxxA" Name="Context" Kind="OutputPin">
@@ -1926,9 +1927,9 @@
                       <Choice Kind="TypeFlag" Name="IStyle" />
                     </p:TypeAnnotation>
                   </Pin>
-                  <Pin Id="VIrrXYFlhJvN5q6c5ryUj4" Name="Widget Context" Kind="InputPin">
+                  <Pin Id="VIrrXYFlhJvN5q6c5ryUj4" Name="Editor Context" Kind="InputPin">
                     <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget__channelsagain__.vl">
-                      <Choice Kind="TypeFlag" Name="WidgetContext" />
+                      <Choice Kind="TypeFlag" Name="ValueEditorContext" />
                     </p:TypeAnnotation>
                   </Pin>
                   <Pin Id="HSUYiBGOLojNFucVwTM8XW" Name="Context" Kind="OutputPin">
@@ -2127,14 +2128,14 @@
                         <Node Bounds="620,910,105,19" Id="JOjJGqOQwvAPYim1uLEPxD">
                           <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <Choice Kind="ProcessAppFlag" Name="Widget (Dynamic)" />
+                            <Choice Kind="ProcessAppFlag" Name="ValueEditor (Dynamic)" />
                           </p:NodeReference>
                           <Pin Id="VJnRbvTr8Q4Oou1Hr866EM" Name="Node Context" Kind="InputPin" IsHidden="true" />
                           <Pin Id="Iao3XnKSFDOM0MRfpHwnqw" Name="Context" Kind="InputPin" />
                           <Pin Id="IcCkSN3oHVLOtH2sp9GF8M" Name="Channel" Kind="InputPin" />
                           <Pin Id="N8GYYYO6lK5ORT4vlCbHY4" Name="Label" Kind="InputPin" />
                           <Pin Id="JxGvO5llD2bPPo75yKdE7U" Name="Style" Kind="InputPin" />
-                          <Pin Id="QbQ6D1XfbukQVO3tMJR0x2" Name="Widget Context" Kind="InputPin" />
+                          <Pin Id="QbQ6D1XfbukQVO3tMJR0x2" Name="Editor Context" Kind="InputPin" />
                           <Pin Id="MF8UkoiwFfTQGBZdisVYwr" Name="Output" Kind="OutputPin" />
                           <Pin Id="TjSOxoBKHVdLvAFRKi28PN" Name="Context" Kind="OutputPin" />
                           <Pin Id="LlknA2RGopUQHbkc9QLIuD" Name="Fixed Type" Kind="InputPin" DefaultValue="False" />
@@ -2175,7 +2176,7 @@
                       <Pin Id="HiJAfVP8ne5OQ8HAVlp8Gr" Name="Context" Kind="InputPin" />
                       <Pin Id="Qs2YK08hTFIOUDjJ4ZZWFF" Name="Label" Kind="InputPin" />
                       <Pin Id="DNucFyOhW6HNHVYrcjH7SG" Name="Style" Kind="InputPin" />
-                      <Pin Id="RgJbXhYOkW3LyhRtXL08px" Name="Widget Context" Kind="InputPin" />
+                      <Pin Id="RgJbXhYOkW3LyhRtXL08px" Name="Editor Context" Kind="InputPin" />
                       <Pin Id="CV5tOliGXjnN3xkYJswgL2" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="Jfm1BkSxg5cMfta36NR2Oe" Name="Context" Kind="OutputPin" />
                     </Node>
@@ -2280,17 +2281,16 @@
             <Node Bounds="449,486,69,26" Id="VHYrpudqwpfLR4yLdKGkv5">
               <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widget____.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="ClassType" Name="WidgetContext" />
+                <CategoryReference Kind="ClassType" Name="ValueEditorContext" />
                 <Choice Kind="OperationCallFlag" Name="Enter" />
               </p:NodeReference>
               <Pin Id="LD6lNl2C55mPyIt1qq813s" Name="Input" Kind="StateInputPin" />
               <Pin Id="Dp9IamDcufDLekrLUhJ4Pv" Name="Identifier" Kind="InputPin" />
               <Pin Id="U6wNkt3ZxhDM1G5HKWdBQq" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="433,1344,70,26" Id="Ssf2aY5McVXOiqYFV0faJU">
-              <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widget____.vl">
+            <Node Bounds="433,1344,70,19" Id="Ssf2aY5McVXOiqYFV0faJU">
+              <p:NodeReference LastCategoryFullName="Main.ValueEditorContext" LastDependency="ValueEditors.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <FullNameCategoryReference ID="Main.WidgetContext" />
                 <Choice Kind="OperationCallFlag" Name="Leave" />
               </p:NodeReference>
               <Pin Id="Tllhe24TknjQHv8LsG5nAV" Name="Input" Kind="StateInputPin" />
@@ -2298,10 +2298,10 @@
             </Node>
             <Pad Id="JwrwqU56yHNMik0jMonjQZ" Comment="" Bounds="535,1300,445,116" ShowValueBox="true" isIOBox="true" />
             <ControlPoint Id="Lg570gLlIp0OUpmOioMeAN" Bounds="252,770" />
-            <Node Bounds="242,792,125,26" Id="IxeXtl35itZL5E32Rd1362">
-              <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widget__channelsagai_n__.vl">
+            <Node Bounds="242,792,125,19" Id="IxeXtl35itZL5E32Rd1362">
+              <p:NodeReference LastCategoryFullName="Main.ValueEditorContext" LastDependency="ValueEditors.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <FullNameCategoryReference ID="Main.WidgetContext" />
+                <CategoryReference Kind="ClassType" Name="ValueEditorContext" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="SynchronizationContext" />
               </p:NodeReference>
               <Pin Id="FdbVdl6CNBpPS2I0x3viUL" Name="Input" Kind="StateInputPin" />
@@ -2324,7 +2324,7 @@
             <Pin Id="QMocWCm0XchO9R8FnFd1nP" Name="Identifier" Kind="InputPin" />
             <Pin Id="KyksoFpyCL1QUQZj8R5hfA" Name="Properties" Kind="InputPin" />
             <Pin Id="I0jpaDoBcwjOySCIWDsgxy" Name="Style" Kind="InputPin" />
-            <Pin Id="RTyM500WtylPpkDKOXPtHk" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="RTyM500WtylPpkDKOXPtHk" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="PVu3dxK2mhpLjZiXxL8xcK" HasStateOut="true">
             <Fragment Id="OcV5gJ0QMYjPmYuA54QrTF" Patch="C6BXrw9yZFyO8uKNmElP7n" Enabled="true" />
@@ -2394,10 +2394,10 @@
       </Node>
       <!--
 
-    ************************ WidgetContext ************************
+    ************************ ValueEditorContext ************************
 
 -->
-      <Node Name="WidgetContext" Bounds="426,80" Id="GilxxCb9arpMviUlt5orFY">
+      <Node Name="ValueEditorContext" Bounds="426,80" Id="GilxxCb9arpMviUlt5orFY">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
@@ -2443,14 +2443,14 @@
               <Patch Id="Hbu1fNQDptvLG66lXlQJTg" ManuallySortedPins="true">
                 <Patch Id="Eogb0weavQXM3oU7XidJSD" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="E8Nv5URRAKRLaDZsXFDewG" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="1040,623,152,126" Id="UzjB7HnoLztNH7VKvbmYJ5">
+                <Node Bounds="1040,623,168,126" Id="UzjB7HnoLztNH7VKvbmYJ5">
                   <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
                     <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Invoke (Synced)" />
                   </p:NodeReference>
                   <Pin Id="O5pdFKp9KMUOBCKRriotqE" Name="Synchronization Context" Kind="InputPin" />
                   <Patch Id="TF423fgQwAkQDvNWbgOX1Q" Name="Action" ManuallySortedPins="true">
-                    <Node Bounds="1092,643,88,86" Id="RsKpbfgswfFNLbOSEWDCjJ">
+                    <Node Bounds="1092,643,104,86" Id="RsKpbfgswfFNLbOSEWDCjJ">
                       <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <CategoryReference Kind="Category" Name="Primitive" />
@@ -2461,10 +2461,10 @@
                         <Patch Id="JD3AfAU2CpJMKpG93TLHtn" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="KwxbDMS6XUJQY29nnUGhh3" Name="Update" ManuallySortedPins="true" />
                         <Patch Id="LyH4MN8kNVDOOxFMLZD4Jh" Name="Dispose" ManuallySortedPins="true" />
-                        <Node Bounds="1104,682,64,26" Id="UA3m4362xBwPPwY6lWNnYv">
-                          <p:NodeReference LastCategoryFullName="Main.WidgetAction" LastDependency="editable widget____.vl">
+                        <Node Bounds="1104,682,80,26" Id="UA3m4362xBwPPwY6lWNnYv">
+                          <p:NodeReference LastCategoryFullName="Main.ValueEditorAction" LastDependency="ValueEditors.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <FullNameCategoryReference ID="Main.WidgetAction" />
+                            <CategoryReference Kind="RecordType" Name="ValueEditorAction" NeedsToBeDirectParent="true" />
                             <Choice Kind="OperationCallFlag" Name="Invoke" />
                           </p:NodeReference>
                           <Pin Id="SGsdvWQaEa8Mnih8QDm6JZ" Name="Input" Kind="StateInputPin" />
@@ -2513,10 +2513,10 @@
               <Pin Id="NVMOLe3yPp8NDJNT7yAorY" Name="Item" Kind="InputPin" />
               <Pin Id="J3Ww7sLn4PLNZUWafjzZgH" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="349,616,64,26" Id="CDQJGAVLJ2aPCCiBzXIO6m">
-              <p:NodeReference LastCategoryFullName="Main.WidgetAction" LastDependency="editable widget____.vl">
+            <Node Bounds="349,616,80,26" Id="CDQJGAVLJ2aPCCiBzXIO6m">
+              <p:NodeReference LastCategoryFullName="Main.ValueEditorAction" LastDependency="ValueEditors.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <FullNameCategoryReference ID="Main.WidgetAction" />
+                <CategoryReference Kind="RecordType" Name="ValueEditorAction" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
               </p:NodeReference>
               <Pin Id="JPpgPbfMssCLlmVr1aheVM" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -2608,7 +2608,7 @@
               <Choice Kind="TypeFlag" Name="MutableList" />
               <p:TypeArguments>
                 <TypeReference>
-                  <Choice Kind="TypeFlag" Name="WidgetAction" />
+                  <Choice Kind="TypeFlag" Name="ValueEditorAction" />
                 </TypeReference>
               </p:TypeArguments>
             </p:TypeAnnotation>
@@ -2693,10 +2693,10 @@
       </Node>
       <!--
 
-    ************************ WidgetAction ************************
+    ************************ ValueEditorAction ************************
 
 -->
-      <Node Name="WidgetAction" Bounds="1151,247" Id="I0Abadu0SSDOyL2jGHK0rz">
+      <Node Name="ValueEditorAction" Bounds="1151,247" Id="I0Abadu0SSDOyL2jGHK0rz">
         <p:NodeReference>
           <Choice Kind="RecordDefinition" />
         </p:NodeReference>
@@ -2750,16 +2750,16 @@
       </Node>
       <!--
 
-    ************************ Float32Widget ************************
+    ************************ Float32Editor ************************
 
 -->
-      <Node Name="Float32Widget" Bounds="250,808" Id="OwxgtWNPJNqPqviaEPBN0s">
+      <Node Name="Float32Editor" Bounds="250,808" Id="OwxgtWNPJNqPqviaEPBN0s">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="O5Ko6mjckfjPZ3uz2LJ5AF">
@@ -2796,7 +2796,7 @@
             <Pin Id="BCmb6yrAMO8Mma9qbd3xjw" Name="Label" Kind="InputPin" />
             <Pin Id="ToYYkUIxIbeNWSdvBLBoXr" Name="Style" Kind="InputPin" />
             <Pin Id="DuA0PuckEXKNYMNuLaE5nF" Name="Context" Kind="OutputPin" />
-            <Pin Id="VsU0EuwvXyOMivEXTAkhhV" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="VsU0EuwvXyOMivEXTAkhhV" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="AeUi71vLWViLLX2r3eDinj">
             <Fragment Id="UNi6h1sQ4OfL29ZEPPea4D" Patch="KouKhhCocYEL30yaEkMUBH" Enabled="true" />
@@ -2823,10 +2823,10 @@
       </Pad>
       <!--
 
-    ************************ CreateWidget (Float32) ************************
+    ************************ CreateValueEditor (Float32) ************************
 
 -->
-      <Node Name="CreateWidget (Float32)" Bounds="481,764,123,89" Id="Lzn3wMPC1KnOpApWjqan22">
+      <Node Name="CreateValueEditor (Float32)" Bounds="481,764,123,89" Id="Lzn3wMPC1KnOpApWjqan22">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -2837,7 +2837,7 @@
           <Node Bounds="493,787,87,26" Id="JanuHzASJaNLw3hOK1VuYX">
             <p:NodeReference LastCategoryFullName="Main.EditableFloatWidget" LastDependency="callmenames-2024-11-19.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="Float32Widget" />
+              <CategoryReference Kind="ClassType" Name="Float32Editor" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="IvBvZUT4xgONupCf4Zjt2Z" Name="Output" Kind="StateOutputPin" />
@@ -2848,16 +2848,16 @@
       </Node>
       <!--
 
-    ************************ BooleanWidget ************************
+    ************************ BooleanEditor ************************
 
 -->
-      <Node Name="BooleanWidget" Bounds="250,954" Id="BQZGXQmQtYkNGXh4V3fgWo">
+      <Node Name="BooleanEditor" Bounds="250,954" Id="BQZGXQmQtYkNGXh4V3fgWo">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="LcvVL0G9J5iMSKYpMYA9c1">
@@ -2889,7 +2889,7 @@
             <Pin Id="SEB0LfSmYx8PYjYT7E5hJo" Name="Label" Kind="InputPin" />
             <Pin Id="IKjL3Cenog7LO0uxwNFE1n" Name="Style" Kind="InputPin" />
             <Pin Id="K52MfWPRGT0PnWJhgZFIeH" Name="Context" Kind="OutputPin" />
-            <Pin Id="V0IQ9L8pJgRP7A7avVwRUV" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="V0IQ9L8pJgRP7A7avVwRUV" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="TtQ4zubKd3aONHieCjZUX3">
             <Fragment Id="ULtesE6BNc1N8vfdHukdH6" Patch="ALGkRxs0nvJOGnn77QNcNS" Enabled="true" />
@@ -2907,10 +2907,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Boolean) ************************
+    ************************ CreateValueEditor (Boolean) ************************
 
 -->
-      <Node Name="CreateWidget (Boolean)" Bounds="481,910,123,89" Id="LXBETYu45CBNHd5nm1A3e4">
+      <Node Name="CreateValueEditor (Boolean)" Bounds="481,910,123,89" Id="LXBETYu45CBNHd5nm1A3e4">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -2921,7 +2921,7 @@
           <Node Bounds="493,933,87,26" Id="HVCTHt54ZvUPgi9p5XItkN">
             <p:NodeReference LastCategoryFullName="Main.EditableBoolWidget" LastDependency="editable widget.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="BooleanWidget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="BooleanEditor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="NkFzq8Cyf4qPuaaflp5gAk" Name="Output" Kind="StateOutputPin" />
@@ -2932,16 +2932,16 @@
       </Node>
       <!--
 
-    ************************ Vector2Widget ************************
+    ************************ Vector2Editor ************************
 
 -->
-      <Node Name="Vector2Widget" Bounds="250,1098" Id="MCWvFHQEhITNQGR3vAWz77">
+      <Node Name="Vector2Editor" Bounds="250,1098" Id="MCWvFHQEhITNQGR3vAWz77">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="C7vUZtHwcqjON1aKhW5BDc">
@@ -2978,7 +2978,7 @@
             <Pin Id="LoTQrRqMtC3L7iRwci8LN4" Name="Label" Kind="InputPin" />
             <Pin Id="Kbn8tDBugBCOaQma4hkrLH" Name="Style" Kind="InputPin" />
             <Pin Id="UjcKqNLkVrhMLMHIsKTCF1" Name="Context" Kind="OutputPin" />
-            <Pin Id="QhTt7BjyIvILVcx10xlj21" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="QhTt7BjyIvILVcx10xlj21" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="QTdXkJkdbM5NzzrG4P9pwX">
             <Fragment Id="QtlRaybOtriPWivIeYpjpA" Patch="NC7deAcppl0O6gerxnNUpL" Enabled="true" />
@@ -2996,10 +2996,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Vector2) ************************
+    ************************ CreateValueEditor (Vector2) ************************
 
 -->
-      <Node Name="CreateWidget (Vector2)" Bounds="481,1054,123,89" Id="FdxEbBXpJmqOBTzjkPCELf">
+      <Node Name="CreateValueEditor (Vector2)" Bounds="481,1054,123,89" Id="FdxEbBXpJmqOBTzjkPCELf">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -3010,7 +3010,7 @@
           <Node Bounds="493,1077,87,26" Id="POqptBnnPAvPKYTl4tEjRy">
             <p:NodeReference LastCategoryFullName="Main.Vector2Widget" LastDependency="editable widget.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="Vector2Widget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="Vector2Editor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="MibukLvak5jLwzdqj3pPEj" Name="Output" Kind="StateOutputPin" />
@@ -3021,17 +3021,17 @@
       </Node>
       <!--
 
-    ************************ Widget (DynamicPerValue Internal) ************************
+    ************************ ValueEditor (DynamicPerValue Internal) ************************
 
 -->
-      <Node Name="Widget (DynamicPerValue Internal)" Bounds="443,569" Id="Nxpv83830woPKuKalZLgD2">
+      <Node Name="ValueEditor (DynamicPerValue Internal)" Bounds="443,569" Id="Nxpv83830woPKuKalZLgD2">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget (NonGeneric)" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor (NonGeneric)" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="SxTHyWlMineNcuiJYybOyn">
@@ -3047,8 +3047,8 @@
               <Pin Id="QqHX0AI3TbxLVmYJlyLjXO" Name="Output" Kind="StateOutputPin" />
               <Pin Id="HKhFPbTVjuoOOU7sgixKtm" Name="Object" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="IssbezHi0KSM9iDtx8J36N" Bounds="345,876" />
-            <Node Bounds="343,903,94,26" Id="CsrtGeWG1UnP13KvRzqgjm">
+            <ControlPoint Id="IssbezHi0KSM9iDtx8J36N" Bounds="339,959" />
+            <Node Bounds="337,986,94,26" Id="CsrtGeWG1UnP13KvRzqgjm">
               <p:NodeReference LastCategoryFullName="Reactive.Channel (Ungeneric)" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <FullNameCategoryReference ID="Reactive.Channel (Ungeneric)" />
@@ -3058,9 +3058,9 @@
               <Pin Id="BXBxiIA5krRMhj8WRPWZCv" Name="Output" Kind="StateOutputPin" />
               <Pin Id="BAZIP1L8XlHPK9aXEuBUuG" Name="Channel Of Object" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="Kco3GX3rfvzMdiTU5UMcsl" Bounds="1118,875" />
-            <ControlPoint Id="OgzvhDTpzRXMThpxSRYNMB" Bounds="1174,875" />
-            <ControlPoint Id="QsKzTae9ShDQM9ZA7jKIW2" Bounds="1241,885" />
+            <ControlPoint Id="Kco3GX3rfvzMdiTU5UMcsl" Bounds="1121,1033" />
+            <ControlPoint Id="OgzvhDTpzRXMThpxSRYNMB" Bounds="1177,1033" />
+            <ControlPoint Id="QsKzTae9ShDQM9ZA7jKIW2" Bounds="1233,1032" />
             <Node Bounds="479,345,65,19" Id="HSnRhHh8mCqOB6d24XhSEh">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -3083,7 +3083,7 @@
                 <Node Bounds="969,434,105,19" Id="O379ZLNqfxKMnQ8yEajXC9">
                   <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widget__.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="NullWidget" />
+                    <Choice Kind="ProcessAppFlag" Name="NullEditor" />
                   </p:NodeReference>
                   <Pin Id="OuYiQaMOe83Pd6n8iTl1xM" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="Kv8wh078C8nMlVWJcX7tv7" Name="Context" Kind="InputPin" />
@@ -3097,7 +3097,7 @@
               <ControlPoint Id="MNuGMTpbSbcLo9uLcP5uao" Bounds="972,489" Alignment="Bottom" />
             </Node>
             <ControlPoint Id="Cl9jZxFpATMNMdOLRCsS3n" Bounds="1290,298" />
-            <Node Bounds="485,463,561,577" Id="Fy8qADJznU6NycualIijWL">
+            <Node Bounds="479,546,561,577" Id="Fy8qADJznU6NycualIijWL">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -3107,22 +3107,22 @@
                 <Patch Id="N0qASW0hMRJOXvNs8R8I9O" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="OttdDCpUksbLWEb4ottc2e" Name="Update" ParticipatingElements="JTliiciyP3pNgCwdjRhUY6" />
                 <Patch Id="HCAhHNPxBVtLSff1a5ljio" Name="Dispose" />
-                <Node Bounds="929,1001,105,19" Id="DjdKTyIvv1sP1cAOui3QsU">
+                <Node Bounds="923,1084,105,19" Id="DjdKTyIvv1sP1cAOui3QsU">
                   <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="Widget (Dynamic)" />
+                    <Choice Kind="ProcessAppFlag" Name="ValueEditor (Dynamic)" />
                   </p:NodeReference>
                   <Pin Id="CFcNTqVGSYQPrHkmmEEimf" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="UuIUr39ZSllOQtYvBTHTFe" Name="Context" Kind="InputPin" />
                   <Pin Id="U8CXMPFcGhmOyWPQxygLVS" Name="Channel" Kind="InputPin" />
                   <Pin Id="CRdXKxU7je0N01HK8oxZ6g" Name="Label" Kind="InputPin" />
                   <Pin Id="FrLH0T3jAHeNlu6dCia9K6" Name="Style" Kind="InputPin" />
-                  <Pin Id="GanuQLkcSxpO9KmhMJBq14" Name="Widget Context" Kind="InputPin" />
+                  <Pin Id="GanuQLkcSxpO9KmhMJBq14" Name="Editor Context" Kind="InputPin" />
                   <Pin Id="NkbB0LiqSpoNiH4N521oWv" Name="Output" Kind="OutputPin" />
                   <Pin Id="VHC0AE84d7CL0LMOaQeDLY" Name="Context" Kind="OutputPin" />
                   <Pin Id="CXDxEH8CWjqP5hxVw76UdH" Name="Fixed Type" Kind="InputPin" DefaultValue="True" />
                 </Node>
-                <Node Bounds="722,901,165,95" Id="F3x7UqtmJJPO2rWaY1Z4PA">
+                <Node Bounds="716,984,165,95" Id="F3x7UqtmJJPO2rWaY1Z4PA">
                   <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -3138,9 +3138,9 @@
                       <Pin Id="VIJ0FMiiVdhORCK8BSVAWT" Name="Input 1" Kind="InputPin" />
                       <Pin Id="Hinn5pWv8LqNp3VeGEzPu7" Name="Output" Kind="OutputPin" />
                     </Patch>
-                    <ControlPoint Id="LXdkDK1JbWAMXqNxaNSxsq" Bounds="831,909" />
-                    <ControlPoint Id="CvT1fPnv4AKM2f0g0C5hJo" Bounds="831,989" />
-                    <Node Bounds="734,942,55,26" Id="OpLwzPKNV1JPegvgTs4Ety">
+                    <ControlPoint Id="LXdkDK1JbWAMXqNxaNSxsq" Bounds="825,992" />
+                    <ControlPoint Id="CvT1fPnv4AKM2f0g0C5hJo" Bounds="825,1072" />
+                    <Node Bounds="728,1025,55,26" Id="OpLwzPKNV1JPegvgTs4Ety">
                       <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <FullNameCategoryReference ID="Reactive.Channel" />
@@ -3154,7 +3154,7 @@
                     </Node>
                   </Patch>
                 </Node>
-                <Node Bounds="936,862,96,86" Id="GmlS2HlA0WtPAFKdnId3tp">
+                <Node Bounds="930,945,96,86" Id="GmlS2HlA0WtPAFKdnId3tp">
                   <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
@@ -3164,7 +3164,7 @@
                     <Patch Id="NgT5QtzkwfdNG2HvpG5R1v" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="ALWzGxP0PsvQGwOXC3kENk" Name="Update" ManuallySortedPins="true" />
                     <Patch Id="I7pRgM2q2eZLnc86bUwknR" Name="Dispose" ManuallySortedPins="true" />
-                    <Node Bounds="948,893,72,26" Id="Sv71Xr0FgkSMjdXN0YbWDK">
+                    <Node Bounds="942,976,72,26" Id="Sv71Xr0FgkSMjdXN0YbWDK">
                       <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="EnsureValue" />
@@ -3178,7 +3178,7 @@
                     </Node>
                   </Patch>
                   <Pin Id="IUAUOTTFjSwLwHM2eL2Cm1" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                  <ControlPoint Id="FLPRqCrGVPWMsCW9RiOEdS" Bounds="950,942" Alignment="Bottom" />
+                  <ControlPoint Id="FLPRqCrGVPWMsCW9RiOEdS" Bounds="944,1025" Alignment="Bottom" />
                   <Pin Id="JISBN6aJ9GMMGYcOk7ytBj" Name="User Exceptions Channel" Kind="InputPin" IsHidden="true" />
                   <Pin Id="IKlTFFxRTFaMdbkdX5Ympq" Name="Stick To Last Valid Outputs" Kind="InputPin" />
                   <Pin Id="BLufw62Ide0Pxg0s5JXgv5" Name="Reset Region On Failure" Kind="InputPin" />
@@ -3187,7 +3187,7 @@
                   <Pin Id="RQX51ovgpILNAgXuwJFJGH" Name="Error Message" Kind="OutputPin" />
                   <Pin Id="DiXQlanpgbQNjN0Yiv1Fqt" Name="Exceptions" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="546,775,89,80" Id="TznUw3uaIMNMra9W7QSAWS">
+                <Node Bounds="540,858,89,80" Id="TznUw3uaIMNMra9W7QSAWS">
                   <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Control" />
@@ -3197,7 +3197,7 @@
                     <Patch Id="GoI3gYgG02SNDJX3lRpEey" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="E2cf3Z13PN0LEVuCDVME1Y" Name="Update" ManuallySortedPins="true" />
                     <Patch Id="KFeYGwdzfQ2MvYBpn4f3PJ" Name="Dispose" ManuallySortedPins="true" />
-                    <Node Bounds="558,807,65,19" Id="RjolIQzVyzdPE5UtAvZe5z">
+                    <Node Bounds="552,890,65,19" Id="RjolIQzVyzdPE5UtAvZe5z">
                       <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <FullNameCategoryReference ID="Reactive.Channel" />
@@ -3213,7 +3213,7 @@
                   </Patch>
                   <Pin Id="SpLYniKd1h5QVRN98FpQAm" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 </Node>
-                <Node Bounds="734,652,71,26" Id="A0VSUqMyD7AMFV4XB0XMjj">
+                <Node Bounds="728,735,71,26" Id="A0VSUqMyD7AMFV4XB0XMjj">
                   <p:NodeReference LastCategoryFullName="System.Application.TypeRegistry" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="TypeRegistry" NeedsToBeDirectParent="true" />
@@ -3224,7 +3224,7 @@
                   <Pin Id="TzlWIbzeh9cLEdRteYrHSA" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="GBzKVI6F98MLjlqCJ7q0B7" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="799,701,58,26" Id="D6vXLgg0NB7Mf5BGDRQTDw">
+                <Node Bounds="793,784,58,26" Id="D6vXLgg0NB7Mf5BGDRQTDw">
                   <p:NodeReference LastCategoryFullName="System.Reflection.IVLTypeInfo" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <FullNameCategoryReference ID="System.Reflection.IVLTypeInfo" />
@@ -3234,7 +3234,7 @@
                   <Pin Id="Gq1oAzPtGdFOx35EQj2x8L" Name="Output" Kind="OutputPin" IsHidden="true" />
                   <Pin Id="UOjpvBPLZVONFGOdbK8LSB" Name="Name" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="775,750,72,26" Id="A6UMbukgKL5Lc8lchSSSse">
+                <Node Bounds="769,833,72,26" Id="A6UMbukgKL5Lc8lchSSSse">
                   <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <FullNameCategoryReference ID="Reactive.Channel" />
@@ -3247,7 +3247,7 @@
                   <Pin Id="Cyxod0VijHMOiLOSrinWob" Name="Apply" Kind="InputPin" />
                   <Pin Id="H5iqqS6IuYcONBaNTIGVHd" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="550,574,139,88" Id="Ls1uBPQJFpyOtQs7SPYBQb">
+                <Node Bounds="544,657,139,88" Id="Ls1uBPQJFpyOtQs7SPYBQb">
                   <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -3259,7 +3259,7 @@
                   <Patch Id="V1DzRVFQm0mQawePE8Vz80" ManuallySortedPins="true">
                     <Patch Id="VmlO9JeCS6HO9F6w2L4vGf" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="HjjDmEgMDAfPPTLL2SpYc5" Name="Then" ManuallySortedPins="true" />
-                    <Node Bounds="562,602,115,26" Id="BpsgFrf71OXOg6YnTTZK6P">
+                    <Node Bounds="556,685,115,26" Id="BpsgFrf71OXOg6YnTTZK6P">
                       <p:NodeReference LastCategoryFullName="Reactive.Channel (Ungeneric)" LastDependency="VL.CoreLib.vl" OverloadStrategy="UserSelectedPins">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="CreateChannelOfType" />
@@ -3273,10 +3273,10 @@
                       <Pin Id="EWtRnkXjiCyMblwt4LrH9u" Name="Result" Kind="OutputPin" />
                     </Node>
                   </Patch>
-                  <ControlPoint Id="IRkmD17o2xIOWurUarqEqH" Bounds="567,580" Alignment="Top" />
-                  <ControlPoint Id="HNoXJeU0ppSOTINHC5nzNT" Bounds="598,656" Alignment="Bottom" />
+                  <ControlPoint Id="IRkmD17o2xIOWurUarqEqH" Bounds="561,663" Alignment="Top" />
+                  <ControlPoint Id="HNoXJeU0ppSOTINHC5nzNT" Bounds="592,739" Alignment="Bottom" />
                 </Node>
-                <Node Bounds="560,486,54,26" Id="V14EslrppDgPuF6jMoRe7n">
+                <Node Bounds="554,569,54,26" Id="V14EslrppDgPuF6jMoRe7n">
                   <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Object" NeedsToBeDirectParent="true" />
@@ -3290,11 +3290,11 @@
               <Pin Id="GWshfqy8RX4OgvEtuYgfR4" Name="Enabled" Kind="InputPin" />
               <Pin Id="VTQRQnzAdQlPQ0KJ8lHQo4" Name="Lifespan" Kind="InputPin" DefaultValue="Short" />
               <Pin Id="LFIdIOHMy8pLxjlpHLrHSy" Name="Reset" Kind="InputPin" IsHidden="true" />
-              <ControlPoint Id="SbbFSftRae5N3tVG070QrK" Bounds="982,469" Alignment="Top" />
-              <ControlPoint Id="Kdx5a6aArA3MyVcn5lRa8O" Bounds="1017,469" Alignment="Top" />
+              <ControlPoint Id="SbbFSftRae5N3tVG070QrK" Bounds="976,552" Alignment="Top" />
+              <ControlPoint Id="Kdx5a6aArA3MyVcn5lRa8O" Bounds="1011,552" Alignment="Top" />
             </Node>
             <ControlPoint Id="NrkHA1yZYTOOzupW790k4b" Bounds="1167,296" />
-            <Node Bounds="734,-123,75,26" Id="OtN5IdPrtEdOLlW1UO6y8v">
+            <Node Bounds="659,-229,75,26" Id="OtN5IdPrtEdOLlW1UO6y8v">
               <p:NodeReference LastCategoryFullName="System.Application.AppHost" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <FullNameCategoryReference ID="System.Application.AppHost" />
@@ -3304,8 +3304,8 @@
               <Pin Id="MzmT2qd7zwjOB3Y99Wxa6q" Name="Output" Kind="StateOutputPin" />
               <Pin Id="FaRumQKIcQXPqOQtpw3xmm" Name="Type Registry" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="CSLupqHX10lLMOgbbw7fLP" Bounds="1231,-157" />
-            <Node Bounds="772,-19,419,291" Id="Tw548AXi6xhNOFMdDftnJM">
+            <ControlPoint Id="CSLupqHX10lLMOgbbw7fLP" Bounds="1239,-263" />
+            <Node Bounds="805,-125,394,308" Id="Tw548AXi6xhNOFMdDftnJM">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -3317,7 +3317,7 @@
               <Patch Id="GVa9wMy1gNtP6N9H8gLtfX" ManuallySortedPins="true">
                 <Patch Id="RJnEF011iusNwU4ZV9jA9v" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="FEelRopHmnkM5zagnlhFF8" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="961,46,218,149" Id="UTSRM5OyuosPi3Towf5ndq">
+                <Node Bounds="969,-60,218,149" Id="UTSRM5OyuosPi3Towf5ndq">
                   <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -3330,7 +3330,7 @@
                       <Pin Id="VNBunsrxGsaQAwGWjIA1TD" Name="Keep" Kind="OutputPin" />
                     </Patch>
                     <Patch Id="PK2OikP2f37QSjpiScsYpr" Name="Dispose" ManuallySortedPins="true" />
-                    <Node Bounds="973,78,59,26" Id="EgcJhSPkDUMMrinbLbwJoU">
+                    <Node Bounds="981,-28,59,26" Id="EgcJhSPkDUMMrinbLbwJoU">
                       <p:NodeReference LastCategoryFullName="System.Reflection.IVLTypeInfo" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <FullNameCategoryReference ID="System.Reflection.IVLTypeInfo" />
@@ -3340,7 +3340,7 @@
                       <Pin Id="HI9xWnsKO3qNwNs42mfbW6" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="C6yr3YpXD2NMCDjv5J9vhy" Name="Name" Kind="OutputPin" />
                     </Node>
-                    <Node Bounds="1054,115,85,26" Id="BpP9wlT6afjNyvtZzAf4K5">
+                    <Node Bounds="1062,9,85,26" Id="BpP9wlT6afjNyvtZzAf4K5">
                       <p:NodeReference LastCategoryFullName="System.Reflection.Type" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="IsAssignableTo" />
@@ -3350,7 +3350,7 @@
                       <Pin Id="P3bMiOFpNBTLs4h0QMgHFF" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="KwJYvL4gGaFO7Lt75SYeR1" Name="Result" Kind="OutputPin" />
                     </Node>
-                    <Node Bounds="1056,73,58,26" Id="FTdNqwHI76hOZnG63vNsbq">
+                    <Node Bounds="1064,-33,58,26" Id="FTdNqwHI76hOZnG63vNsbq">
                       <p:NodeReference LastCategoryFullName="System.Reflection.IVLTypeInfo" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <FullNameCategoryReference ID="System.Reflection.IVLTypeInfo" />
@@ -3360,12 +3360,12 @@
                       <Pin Id="EJGiQj2AfHgMrDsU3IOJXm" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="F5qJP3yjyRBQIUU5ZcHTqk" Name="Clr Type" Kind="OutputPin" />
                     </Node>
-                    <ControlPoint Id="VwWQ1fyWpgYQIKuoDBOmpG" Bounds="1133,177" />
+                    <ControlPoint Id="VwWQ1fyWpgYQIKuoDBOmpG" Bounds="1141,71" />
                   </Patch>
-                  <ControlPoint Id="UdIL4GczK6sPXrH8QPAfGQ" Bounds="976,52" Alignment="Top" />
-                  <ControlPoint Id="QeVJ59d7rOgPqUH6apI9D1" Bounds="976,189" Alignment="Bottom" />
+                  <ControlPoint Id="UdIL4GczK6sPXrH8QPAfGQ" Bounds="984,-54" Alignment="Top" />
+                  <ControlPoint Id="QeVJ59d7rOgPqUH6apI9D1" Bounds="984,83" Alignment="Bottom" />
                 </Node>
-                <Node Bounds="809,4,91,26" Id="SzA5AQ0qLsAP9uUiO2oJjA">
+                <Node Bounds="817,-102,91,26" Id="SzA5AQ0qLsAP9uUiO2oJjA">
                   <p:NodeReference LastCategoryFullName="System.Application.TypeRegistry" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="TypeRegistry" />
@@ -3375,7 +3375,7 @@
                   <Pin Id="NL14OxuqFiLMnM08hIL51T" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="N32aFPCzUdLMS8uD0GiZCj" Name="Registered Types" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="825,157,55,40" Id="GgKEa04WqHWMAvvNrjutu0">
+                <Node Bounds="980,115,55,40" Id="GgKEa04WqHWMAvvNrjutu0">
                   <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                     <FullNameCategoryReference ID="Collections.Spread" />
@@ -3387,13 +3387,13 @@
                   <Patch Id="BrtUeInPQCUOuEQuFAPhTH" Name="Key Selector" ManuallySortedPins="true">
                     <Pin Id="Gdg83yHyKoMO45c3cPeVQR" Name="Input" Kind="InputPin" />
                     <Pin Id="KDZQiGIM9vVLxu2ecdXKCv" Name="Result" Kind="OutputPin" />
-                    <ControlPoint Id="HpGhMgLTbypPVqEl8UFMgL" Bounds="829,165" />
-                    <ControlPoint Id="SMDtYWYnrv4PLUydzpk2Fw" Bounds="829,190" />
+                    <ControlPoint Id="HpGhMgLTbypPVqEl8UFMgL" Bounds="984,123" />
+                    <ControlPoint Id="SMDtYWYnrv4PLUydzpk2Fw" Bounds="984,148" />
                   </Patch>
                 </Node>
               </Patch>
-              <ControlPoint Id="H12lZmV8195NUxzpDyLeeL" Bounds="1136,-13" Alignment="Top" />
-              <ControlPoint Id="QGUL9PkkN2BMUXebKVKpwO" Bounds="962,266" Alignment="Bottom" />
+              <ControlPoint Id="H12lZmV8195NUxzpDyLeeL" Bounds="1144,-119" Alignment="Top" />
+              <ControlPoint Id="QGUL9PkkN2BMUXebKVKpwO" Bounds="987,177" Alignment="Bottom" />
             </Node>
             <Node Bounds="966,320,125,19" Id="EGt63xsZBG5NnFRXvKIgIB">
               <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGui.vl">
@@ -3424,7 +3424,7 @@
               <Pin Id="QETcUataZp9OJQgpOdwB2d" Name="Output" Kind="OutputPin" />
               <Pin Id="JoUqHb5QZarLTthib4uPh6" Name="Value" Kind="OutputPin" />
             </Node>
-            <Node Bounds="1189,-120,92,26" Id="REeCskR6Y6bMjKb0VQ5htC">
+            <Node Bounds="1197,-226,92,26" Id="REeCskR6Y6bMjKb0VQ5htC">
               <p:NodeReference LastCategoryFullName="Reactive.Channel (Ungeneric)" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="ClrTypeOfValues" />
@@ -3486,7 +3486,7 @@
               </Patch>
             </Node>
             <ControlPoint Id="CwggAhyxMbbMmpZVJlqvDE" Bounds="1336,414" />
-            <ControlPoint Id="GPJYydkpTlzQLVkwB38ib7" Bounds="1257,37" />
+            <ControlPoint Id="GPJYydkpTlzQLVkwB38ib7" Bounds="1263,-151" />
           </Canvas>
           <ProcessDefinition Id="TcbvOboaba8OE2mts7jVj1" IsHidden="true">
             <Fragment Id="AlZDcSUxza6L4CBIhwDhzL" Patch="DRkNDrUlgT7OUez60Nlzk4" Enabled="true" />
@@ -3498,7 +3498,7 @@
             <Pin Id="EEciPzUm5gsLefzvgofWxr" Name="Channel" Kind="InputPin" />
             <Pin Id="MWHaZZ2ySUyOJZNb2cndcl" Name="Label" Kind="InputPin" />
             <Pin Id="Kn6ib78i9NdL0gpZ0CBDl2" Name="Style" Kind="InputPin" />
-            <Pin Id="VlkMQV1pdWaNTnj7DkyPJJ" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="VlkMQV1pdWaNTnj7DkyPJJ" Name="Editor Context" Kind="InputPin" />
             <Pin Id="Emz5a8Z5AUjNumsU68iCn3" Name="Context" Kind="OutputPin" />
           </Patch>
           <Link Id="A0l5hSpHLqVPOlM1Bk5Say" Ids="EEciPzUm5gsLefzvgofWxr,IJTJShjTFwfQPFakUq7JxB" IsHidden="true" />
@@ -3579,16 +3579,16 @@
       </Node>
       <!--
 
-    ************************ Vector3Widget ************************
+    ************************ Vector3Editor ************************
 
 -->
-      <Node Name="Vector3Widget" Bounds="250,1234" Id="BsM28a9GxuAMiSEBObgLiK">
+      <Node Name="Vector3Editor" Bounds="250,1234" Id="BsM28a9GxuAMiSEBObgLiK">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="UGmbiTLW80fPk4CqVDWKey">
@@ -3625,7 +3625,7 @@
             <Pin Id="MqE6zy0H6UAOpEthX8uwfi" Name="Label" Kind="InputPin" />
             <Pin Id="S08ym8KN5p8LECLxOFDQEM" Name="Style" Kind="InputPin" />
             <Pin Id="KYjiwsmtwMsMiQJrKwQ8GO" Name="Context" Kind="OutputPin" />
-            <Pin Id="HwKOU9oz3M3LEtD4zJMstV" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="HwKOU9oz3M3LEtD4zJMstV" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="OOFsfVo7QVtL8XYhzuNiXq">
             <Fragment Id="UQJ6B0UihDTNUhXsX1XwSE" Patch="RHFE4ez6wQBPd6s3UmORQK" Enabled="true" />
@@ -3643,10 +3643,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Vector3) ************************
+    ************************ CreateValueEditor (Vector3) ************************
 
 -->
-      <Node Name="CreateWidget (Vector3)" Bounds="481,1190,123,89" Id="PFcnfqcLxVAPXDQFkHytTG">
+      <Node Name="CreateValueEditor (Vector3)" Bounds="481,1190,123,89" Id="PFcnfqcLxVAPXDQFkHytTG">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -3657,7 +3657,7 @@
           <Node Bounds="493,1213,87,26" Id="GrLr7NeiKPHMStCqxggF05">
             <p:NodeReference LastCategoryFullName="Main.Vector3Widget" LastDependency="editable widget__channelsagai_n__.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="Vector3Widget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="Vector3Editor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="HXial8lwpZJMqufNuKQexl" Name="Output" Kind="StateOutputPin" />
@@ -3669,16 +3669,16 @@
       <Overlay Id="IkoWRXZi5nOON5XKrxgWpO" Name="unused" Bounds="1009,99,390,253" />
       <!--
 
-    ************************ Vector4Widget ************************
+    ************************ Vector4Editor ************************
 
 -->
-      <Node Name="Vector4Widget" Bounds="250,1366" Id="A2HU0Bt7DN7PMBeaZZ49Ne">
+      <Node Name="Vector4Editor" Bounds="250,1366" Id="A2HU0Bt7DN7PMBeaZZ49Ne">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="IHpVCk37DI0MEhym2IM4fx">
@@ -3715,7 +3715,7 @@
             <Pin Id="VZDmJmAJMHqOonx9845Jre" Name="Label" Kind="InputPin" />
             <Pin Id="MbKfLHmA54WLRdWnXWWqdc" Name="Style" Kind="InputPin" />
             <Pin Id="I6gCGL5qzErMzaJ8feHD02" Name="Context" Kind="OutputPin" />
-            <Pin Id="RmeeyB8mFFUNsGk5reGcZb" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="RmeeyB8mFFUNsGk5reGcZb" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="IJJI39grRRYOpjitiPcmLq">
             <Fragment Id="Id8b8VlxPSKLwylpebNl2O" Patch="TNfM7ktFN2aLjAD9Yy8nMG" Enabled="true" />
@@ -3733,10 +3733,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Vector4) ************************
+    ************************ CreateValueEditor (Vector4) ************************
 
 -->
-      <Node Name="CreateWidget (Vector4)" Bounds="481,1322,123,89" Id="VbfboSHPYwUMKlMew1yhav">
+      <Node Name="CreateValueEditor (Vector4)" Bounds="481,1322,123,89" Id="VbfboSHPYwUMKlMew1yhav">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -3747,7 +3747,7 @@
           <Node Bounds="493,1345,87,26" Id="SmzxbCmqUMHNSRa1o6eSTK">
             <p:NodeReference LastCategoryFullName="Main.Vector4Widget" LastDependency="editable widget__channelsagai_n__.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="Vector4Widget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="Vector4Editor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="RSpube84ABRMk8ulBo6PoQ" Name="Output" Kind="StateOutputPin" />
@@ -3758,16 +3758,16 @@
       </Node>
       <!--
 
-    ************************ RGBAWidget ************************
+    ************************ RGBAEditor ************************
 
 -->
-      <Node Name="RGBAWidget" Bounds="250,1508" Id="FTnjo4JEPheM1aePz97EoM">
+      <Node Name="RGBAEditor" Bounds="250,1508" Id="FTnjo4JEPheM1aePz97EoM">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="GQLYj67itrMNy6YE0mr9cp">
@@ -3799,7 +3799,7 @@
             <Pin Id="O4BBxa7X0c2QaohtvaQ5x8" Name="Label" Kind="InputPin" />
             <Pin Id="UhUVczpV27eMpJ8uJgBduY" Name="Style" Kind="InputPin" />
             <Pin Id="Mw3vKClcN5aMDdmVhLEf6O" Name="Context" Kind="OutputPin" />
-            <Pin Id="DlAADNz6h68MZIdg94C9KP" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="DlAADNz6h68MZIdg94C9KP" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="VueXaGvSK3mPHxOxH4hv1q">
             <Fragment Id="Kb1GM6pCfCIMbNLfQkkgut" Patch="DL0t7XaJqksLaI6thIWNSH" Enabled="true" />
@@ -3817,10 +3817,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (RGBA) ************************
+    ************************ CreateValueEditor (RGBA) ************************
 
 -->
-      <Node Name="CreateWidget (RGBA)" Bounds="481,1464,123,89" Id="HID1ZefQb3SNO0qEhraiOf">
+      <Node Name="CreateValueEditor (RGBA)" Bounds="481,1464,123,89" Id="HID1ZefQb3SNO0qEhraiOf">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -3831,7 +3831,7 @@
           <Node Bounds="493,1487,87,26" Id="RmbyMMwPhHKMcOXDXDMOkz">
             <p:NodeReference LastCategoryFullName="Main.RGBAWidget" LastDependency="editable widget__channelsagai_n__.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="RGBAWidget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="RGBAEditor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="Sg264hYyBeoPB8L9hiCYWK" Name="Output" Kind="StateOutputPin" />
@@ -3842,16 +3842,16 @@
       </Node>
       <!--
 
-    ************************ QuaternionWidget ************************
+    ************************ QuaternionEditor ************************
 
 -->
-      <Node Name="QuaternionWidget" Bounds="250,1638" Id="HzvJviqYPNCNTLM48gXoYE">
+      <Node Name="QuaternionEditor" Bounds="250,1638" Id="HzvJviqYPNCNTLM48gXoYE">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="HZ9iQqhovc6MIeZBvNHkKs">
@@ -3942,7 +3942,7 @@
             <Pin Id="GO8TcXX3my9NJYq0yrNIUz" Name="Label" Kind="InputPin" />
             <Pin Id="GHNN4KBUfIoNcQ5wa8EzEj" Name="Style" Kind="InputPin" />
             <Pin Id="G8TIDCVBPBNLTCgUVu71iw" Name="Context" Kind="OutputPin" />
-            <Pin Id="COaCWQbPedRNncX9bv5Re5" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="COaCWQbPedRNncX9bv5Re5" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="NAygGkx15MNQMCUxNHyca1">
             <Fragment Id="SMdd0qDQ4KKPRcbsbWg387" Patch="Ng0MQEijRWiMYy00K2bDvZ" Enabled="true" />
@@ -3970,10 +3970,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Quaternion) ************************
+    ************************ CreateValueEditor (Quaternion) ************************
 
 -->
-      <Node Name="CreateWidget (Quaternion)" Bounds="481,1594,123,89" Id="EA19Krdw2KMQdjdABr1ilK">
+      <Node Name="CreateValueEditor (Quaternion)" Bounds="481,1594,123,89" Id="EA19Krdw2KMQdjdABr1ilK">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -3984,7 +3984,7 @@
           <Node Bounds="493,1617,87,26" Id="KZX3BG0FK14LaJM35pznVp">
             <p:NodeReference LastCategoryFullName="Main.QuaternionWidget" LastDependency="editable widget__channelsagai_n__.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="QuaternionWidget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="QuaternionEditor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="Kgpmi1GIoXZQKMqhjUwIcO" Name="Output" Kind="StateOutputPin" />
@@ -3995,16 +3995,16 @@
       </Node>
       <!--
 
-    ************************ SpreadWidget ************************
+    ************************ SpreadEditor ************************
 
 -->
-      <Node Name="SpreadWidget" Bounds="250,1802" Id="LxJSLXr3D7WLQE6vuZShFu">
+      <Node Name="SpreadEditor" Bounds="250,1802" Id="LxJSLXr3D7WLQE6vuZShFu">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="MiUOA4JE8HyOLl43a6M7nW" IsGeneric="true" ExplicitTypeParameters="T">
@@ -4337,14 +4337,14 @@
                         <Node Bounds="375,1426,105,19" Id="GM6qNZKFfuTPM3LD3MpbPu">
                           <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <Choice Kind="ProcessAppFlag" Name="Widget (Dynamic)" />
+                            <Choice Kind="ProcessAppFlag" Name="ValueEditor (Dynamic)" />
                           </p:NodeReference>
                           <Pin Id="A61aaXMCGkgLG0n3Dj9hGJ" Name="Node Context" Kind="InputPin" IsHidden="true" />
                           <Pin Id="EJOXI0UhNstOj2WnrhD6Bk" Name="Context" Kind="InputPin" />
                           <Pin Id="NB0W8wa4Bu5PLrEW0q5FUm" Name="Channel" Kind="InputPin" />
                           <Pin Id="J3HimwGxVbKNhuha54Vdmp" Name="Label" Kind="InputPin" />
                           <Pin Id="CxDzPHSAoNEOAI5yVFopXO" Name="Style" Kind="InputPin" />
-                          <Pin Id="Iu4NI7W0VhZMaFfZAX2C87" Name="Widget Context" Kind="InputPin" />
+                          <Pin Id="Iu4NI7W0VhZMaFfZAX2C87" Name="Editor Context" Kind="InputPin" />
                           <Pin Id="KivyCuy0xBHN7stzM193ak" Name="Fixed Type" Kind="InputPin" />
                           <Pin Id="HWzr8b00CzgLnxC4H1v2vR" Name="Output" Kind="OutputPin" />
                           <Pin Id="BaeKawGT8VBLurphoqYvBC" Name="Context" Kind="OutputPin" />
@@ -4424,6 +4424,7 @@
                   </p:TypeAnnotation>
                 </Pad>
               </Patch>
+              <Pin Id="QDIfFdCGuvkLeMQrcVgz9y" Name="Strip" Kind="InputPin" />
             </Node>
             <Node Bounds="554,416,71,26" Id="OiiqN5fFcgyQaJcNMX3L1H">
               <p:NodeReference LastCategoryFullName="Primitive.Optional" LastDependency="VL.CoreLib.vl">
@@ -4477,10 +4478,10 @@
             </Node>
             <ControlPoint Id="Oa8HrlEJFXGO5IodLx2PMO" Bounds="186,1254" />
             <ControlPoint Id="NzJpXR1h4pPLbzKUVFpwx9" Bounds="1047,1100" />
-            <Node Bounds="1037,1122,125,26" Id="Kz9ybN6FfyZPrHzBqTtIoF">
-              <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widget__channelsagai_n__.vl">
+            <Node Bounds="1037,1122,125,19" Id="Kz9ybN6FfyZPrHzBqTtIoF">
+              <p:NodeReference LastCategoryFullName="Main.ValueEditorContext" LastDependency="ValueEditors.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <FullNameCategoryReference ID="Main.WidgetContext" />
+                <CategoryReference Kind="ClassType" Name="ValueEditorContext" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="SynchronizationContext" />
               </p:NodeReference>
               <Pin Id="EVqqCqcpQFWN19ox708cCB" Name="Input" Kind="StateInputPin" />
@@ -4511,7 +4512,7 @@
             <Pin Id="DZEJPo3p3YzLhF5Qe2YyOx" Name="Label" Kind="InputPin" />
             <Pin Id="MI8GxK3aRSGL3Zp8qXRj2Q" Name="Style" Kind="InputPin" />
             <Pin Id="TM5z6puIQnaOqHqJHbqQLR" Name="Context" Kind="OutputPin" />
-            <Pin Id="DOUGOMUGKpaM9kPcQNjU8i" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="DOUGOMUGKpaM9kPcQNjU8i" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="N1uo1JHvLtXNFClaoYPJ7u">
             <Fragment Id="LcrQIjhVzKLOQ9BnIQGo3E" Patch="Ovf5Tyuevz6MvdCqTyPuY9" Enabled="true" />
@@ -4591,10 +4592,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Spread) ************************
+    ************************ CreateValueEditor (Spread) ************************
 
 -->
-      <Node Name="CreateWidget (Spread)" Bounds="481,1758,123,89" Id="P47UahsfBItNu86DtsOBST">
+      <Node Name="CreateValueEditor (Spread)" Bounds="481,1758,123,89" Id="P47UahsfBItNu86DtsOBST">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -4605,7 +4606,7 @@
           <Node Bounds="493,1781,87,26" Id="KCgIQqeMkOUMKTlUmiQP3l">
             <p:NodeReference LastCategoryFullName="Main.SpreadWidget" LastDependency="editable widget__channelsagai_n__.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="SpreadWidget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="SpreadEditor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="CQRstvQ3vxKPYGBPz5H5ZO" Name="Output" Kind="StateOutputPin" />
@@ -5059,16 +5060,16 @@
       </Node>
       <!--
 
-    ************************ Integer32Widget ************************
+    ************************ Integer32Editor ************************
 
 -->
-      <Node Name="Integer32Widget" Bounds="799,821" Id="ELGZfeUyZPNNi5iJhluqO2">
+      <Node Name="Integer32Editor" Bounds="799,821" Id="ELGZfeUyZPNNi5iJhluqO2">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="IP2Sfdgod9xLqtd7MNh3ws">
@@ -5105,7 +5106,7 @@
             <Pin Id="PYclHLtrVjaNPLyZ0xjnYA" Name="Label" Kind="InputPin" />
             <Pin Id="Ihk7Z9erdqFONb1DNDvxXy" Name="Style" Kind="InputPin" />
             <Pin Id="LW2nwV4o2eIPW6t4jgFEfH" Name="Context" Kind="OutputPin" />
-            <Pin Id="Kr3IczS8fxINp5Ktz74twl" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="Kr3IczS8fxINp5Ktz74twl" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="UdHTeFlPTPhOOyiuLh8jgD">
             <Fragment Id="Hg6tVp3TgR0QA0aVoFmf38" Patch="Kb6WwXMS6tqPlKaHohNEWe" Enabled="true" />
@@ -5123,10 +5124,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (Integer32) ************************
+    ************************ CreateValueEditor (Integer32) ************************
 
 -->
-      <Node Name="CreateWidget (Integer32)" Bounds="1030,777,123,89" Id="IgsUhX5IopNMxklTSTVgku">
+      <Node Name="CreateValueEditor (Integer32)" Bounds="1030,777,123,89" Id="IgsUhX5IopNMxklTSTVgku">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -5137,7 +5138,7 @@
           <Node Bounds="1042,800,87,26" Id="LnMtjNp4USpLnrCfP44m5F">
             <p:NodeReference LastCategoryFullName="Main.Integer32Widget" LastDependency="editable widgets.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="Integer32Widget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="Integer32Editor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="THGhuixXgfzLSBGlKvoH5x" Name="Output" Kind="StateOutputPin" />
@@ -5148,16 +5149,16 @@
       </Node>
       <!--
 
-    ************************ StringWidget ************************
+    ************************ StringEditor ************************
 
 -->
-      <Node Name="StringWidget" Bounds="800,1100" Id="LzkC6AD4DBJNoTpj7Ygkvv">
+      <Node Name="StringEditor" Bounds="800,1100" Id="LzkC6AD4DBJNoTpj7Ygkvv">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
         <p:Interfaces>
           <TypeReference LastCategoryFullName="Main" LastDependency="callmenames-2024-11-19.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IWidget" />
+            <Choice Kind="InterfaceTypeFlag" Name="IValueEditor" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="OJ7J4iG08y9OrDymVRwgKW">
@@ -5191,7 +5192,7 @@
             <Pin Id="S8Kler6qTtqNZ3tv7bte8B" Name="Label" Kind="InputPin" />
             <Pin Id="RGzqfH16NLRMNuzIfzNbv9" Name="Style" Kind="InputPin" />
             <Pin Id="QFIgCtYWclyOXY0Hp3A18D" Name="Context" Kind="OutputPin" />
-            <Pin Id="J0s3Agdx1G3PevfSVMxu9K" Name="Widget Context" Kind="InputPin" />
+            <Pin Id="J0s3Agdx1G3PevfSVMxu9K" Name="Editor Context" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="NRDVxlqB4LGQWIXFyl1Pcj">
             <Fragment Id="A0bD3vLBDdqMn1KXKUli8e" Patch="HDkLJknKbWlOcEQUvJLFBq" Enabled="true" />
@@ -5209,10 +5210,10 @@
       </Node>
       <!--
 
-    ************************ CreateWidget (String) ************************
+    ************************ CreateValueEditor (String) ************************
 
 -->
-      <Node Name="CreateWidget (String)" Bounds="1031,1056,123,89" Id="OdEkSzPIf9uOISC9XzMudz">
+      <Node Name="CreateValueEditor (String)" Bounds="1031,1056,123,89" Id="OdEkSzPIf9uOISC9XzMudz">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" />
         </p:NodeReference>
@@ -5223,7 +5224,7 @@
           <Node Bounds="1043,1079,87,26" Id="APLnyC3tu9GOBEZI4V2GSO">
             <p:NodeReference LastCategoryFullName="Main.StringWidget" LastDependency="editable widgets.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="StringWidget" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="StringEditor" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="DNJLJbY1o3XNve464d5tMr" Name="Output" Kind="StateOutputPin" />
@@ -5244,302 +5245,13 @@
         <CategoryReference Kind="Category" Name="Primitive" />
       </p:NodeReference>
       <Patch Id="IE4MwY2XMafLzVAhdQuA3H">
-        <Canvas Id="T7IPxPAnkdNQSc3qmi4E0c" CanvasType="Group">
-          <Node Bounds="652,757,185,19" Id="Cj90ekoLtitMdDfn1SyZoO">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Renderer" />
-            </p:NodeReference>
-            <Pin Id="HOYidHQkxd9PJF3zGZGQQL" Name="Bounds" Kind="InputPin" DefaultValue="1912, 500, 540, 760" />
-            <Pin Id="S4PWrPhpYRbNbEn1A3Txmh" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
-            <Pin Id="HFQlShQLrljNS5qINjHSJJ" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="AvOJ1E4mFjiO9gwKmkb51M" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="M9Sjfm06hwuNzQVO8eBC64" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
-            <Pin Id="AdokNYp9BN1PZG40UWYQIy" Name="Input" Kind="InputPin" />
-            <Pin Id="QL1c31rf8KVOAjvxdUogBD" Name="Title" Kind="InputPin" />
-            <Pin Id="COzgeNY9LwCLyZ88ibdhOZ" Name="Color" Kind="InputPin" />
-            <Pin Id="IXZJ2rT4MEPPCUBpJ6NEvb" Name="Clear" Kind="InputPin" />
-            <Pin Id="IIILCNfmsvaMY4O50PLFcv" Name="Space" Kind="InputPin" />
-            <Pin Id="Ge2MKO0rxHmLrzDfthgLxf" Name="Show Cursor" Kind="InputPin" />
-            <Pin Id="IrGo65ZcAA5P3QfMe5d0QE" Name="VSync" Kind="InputPin" />
-            <Pin Id="A1cgDGCDfHPQRydZvIN0aK" Name="Commands" Kind="InputPin" IsHidden="true" />
-            <Pin Id="RCMmIkk7h1FMgJ7WmIn4Sn" Name="Enable Keyboard Shortcuts" Kind="InputPin" IsHidden="true" />
-            <Pin Id="J2OiHvj7abdQB1XONeKFdb" Name="Enabled" Kind="InputPin" />
-            <Pin Id="MitDhiaSIXJQAIKQ0gkutC" Name="Form Bounds Notifications" Kind="OutputPin" IsHidden="true" />
-            <Pin Id="TLIyM0554hgQGcZGa6r94T" Name="Form" Kind="OutputPin" />
-            <Pin Id="O8g3mTx7Y11LlSDQXkW5UV" Name="ClientBounds" Kind="OutputPin" />
-            <Pin Id="JNHOGE2o7mFMJaoa4xAZSD" Name="Render Time" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="690,597,129,80" Id="GrwlBiIARhIL38k48tOuxG">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastDependency="VL.ImGui.Skia.vl">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ImGui" />
-            </p:NodeReference>
-            <Pin Id="VzTPHwyXpcxNOGSL4tWSlN" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="GUalCr3rbAiL3BmYSmqg0v" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="CTjevSkP8EeNEHx2PdCrdN" Name="Fonts" Kind="InputPin" />
-            <Pin Id="VZuI7LGJRrhN349AsutTZC" Name="Add Fullscreen Window" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="RlRyuSaeJhzQclkedE4Sft" Name="Style" Kind="InputPin" />
-            <Pin Id="T7F1CMZK7v5LMc9RbYb1hr" Name="Use Skia Space" Kind="InputPin" />
-            <Pin Id="MhSHAPcPl48OkCEKzJZFu0" Name="Output" Kind="OutputPin" />
-            <Patch Id="KeDfH03IswIM9EnC1mYulo" ManuallySortedPins="true">
-              <Patch Id="KFPK9kItusOOYHunzORKk5" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="CyKQNPFC4T0PkGtMdHM76A" Name="Update" ManuallySortedPins="true" />
-              <Patch Id="GomkVC6sqFxMVYYwjISKIs" Name="Dispose" />
-              <Node Bounds="702,629,105,19" Id="FY1AOxDCfRpLQXLD67qMAu">
-                <p:NodeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="Widget (Dynamic)" />
-                </p:NodeReference>
-                <Pin Id="InoBP6rfrYYOdqrGJaWpWS" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                <Pin Id="JYdNUuh3oGgLYBfl8GF5lL" Name="Context" Kind="InputPin" />
-                <Pin Id="DhF7qsUVs3wMbOqvuStW6L" Name="Channel" Kind="InputPin" />
-                <Pin Id="KfbHAWWHjYGPPXbcv8aGLh" Name="Label" Kind="InputPin" DefaultValue="Beings" />
-                <Pin Id="AWNroRrmR2IPIumaM045K8" Name="Style" Kind="InputPin" />
-                <Pin Id="VpInlVF3WZiNUMWQysmXGR" Name="Output" Kind="OutputPin" />
-                <Pin Id="Ep29cHYBo8JLnGndetouYu" Name="Widget Context" Kind="InputPin" />
-                <Pin Id="CTTekQQINWGLfetdTqTAAU" Name="Fixed Type" Kind="InputPin" DefaultValue="True" />
-                <Pin Id="IvMFfzT3S8mM3lnkcpCmm3" Name="Context" Kind="OutputPin" />
-              </Node>
-            </Patch>
-          </Node>
-          <Node Bounds="852,456,103,19" Id="TS5Ol5JPha4O665iN6MsUk">
-            <p:NodeReference LastCategoryFullName="Graphics.Themes" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="DefaultDarkTheme" />
-            </p:NodeReference>
-            <Pin Id="P85pzu9ftiHOsux98s3gNu" Name="Output" Kind="OutputPin" />
-            <Pin Id="VamLobVyJBANgKwGRD5Xwi" Name="Node Context" Kind="InputPin" IsHidden="true" />
-          </Node>
-          <Node Bounds="850,709,70,26" Id="VqIEi9SPkuPNTOGneienr1">
-            <p:NodeReference LastCategoryFullName="Graphics.Themes.ColorTheme" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Graphics.Themes.ColorTheme" />
-              <Choice Kind="OperationCallFlag" Name="Background" />
-            </p:NodeReference>
-            <Pin Id="JM5F7qNKUOOOxc1W4rDBvd" Name="Input" Kind="StateInputPin" />
-            <Pin Id="DT6JfMfPHD3LdzbYDl8yH1" Name="Output" Kind="OutputPin" IsHidden="true" />
-            <Pin Id="O1aahbbhBj8QMOaA5hC89s" Name="Background" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="764,521,71,19" Id="MDnfPXJare2MnbBG3uxbmB">
-            <p:NodeReference LastCategoryFullName="ImGui.Styling" LastDependency="VL.ImGui.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="ImGui.Styling" />
-              <Choice Kind="ProcessAppFlag" Name="DefaultStyle" />
-            </p:NodeReference>
-            <Pin Id="GkKzFfnsAuxLXR0c6uInJq" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="JoNqgz04VDeNejeVxwSxiO" Name="Input" Kind="InputPin" />
-            <Pin Id="UP2l6zwZV6JO6M813OZUUg" Name="Output" Kind="OutputPin" />
-          </Node>
-          <!--
-
-    ************************ IBeing ************************
-
--->
-          <Node Name="IBeing" Bounds="67,117" Id="Hdtlidj8uHmQCeAuu3o4J9">
-            <p:NodeReference>
-              <Choice Kind="InterfaceDefinition" />
-            </p:NodeReference>
-            <Patch Id="OJPkFXt79IFM73ipHd0yS8">
-              <Canvas Id="CU841EoGNUzNfJMqWJ2ZHP" BordersChecked="false" CanvasType="Group" />
-              <ProcessDefinition Id="RSy4V7sLpWPPJRH4IZTErI" IsHidden="true" />
-            </Patch>
-          </Node>
-          <!--
-
-    ************************ Person ************************
-
--->
-          <Node Name="Person" Bounds="116,176" Id="NbttquD9ETcQLVhVYOeAcG">
-            <p:NodeReference>
-              <Choice Kind="ClassDefinition" />
-            </p:NodeReference>
-            <p:Interfaces>
-              <TypeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
-                <Choice Kind="InterfaceTypeFlag" Name="IBeing" />
-              </TypeReference>
-            </p:Interfaces>
-            <Patch Id="IGnJR8EkRXQOFqvIbTVnho">
-              <Canvas Id="UPprln92LIuM1Q4RW9UFQX" CanvasType="Group">
-                <Pad Id="B54JlJcVAKjLIAuyVsaBl6" SlotId="SQmtYahAaKpLgWWH6XO9aG" Bounds="824,374" />
-                <Pad Id="DQ2tCAPgxz9MeBBFL1BvxO" SlotId="VQwVhqzMrFRNBE7y6zky0O" Bounds="900,374" />
-                <Pad Id="K5vKTSwL0RuNAD0Z13mPQF" SlotId="Cs9731TbiwrLqYUZOAKLJN" Bounds="981,374" />
-                <ControlPoint Id="EZvuiMx0R37LY1zbGS73jQ" Bounds="981,344" />
-                <ControlPoint Id="BUbsg2EQCZ5Qao6brr4Mcu" Bounds="981,405" />
-                <ControlPoint Id="VmsNjjgJdFMMGmL2QQPsjo" Bounds="824,344" />
-                <ControlPoint Id="TJomsCXjovrMOd8tzpffyP" Bounds="824,405" />
-                <ControlPoint Id="DclNpN6P1l0MNdK6iUazWu" Bounds="900,344" />
-                <ControlPoint Id="O0opJC5IglJNWBN1kZyVeO" Bounds="900,405" />
-              </Canvas>
-              <Patch Id="Eiu4NXcmQIlOwrj7KNQTGi" Name="Create">
-                <Pin Id="C7mDbwbU4x0QOer08wgJet" Name="Name" Kind="InputPin" />
-                <Pin Id="Tp7fOB5q5JXNofh6iQ8GzK" Name="City" Kind="InputPin" />
-                <Pin Id="VV4oPiyGyQrO1hikHtfGwd" Name="Age" Kind="InputPin" />
-              </Patch>
-              <ProcessDefinition Id="FAA8IwUfTC5PBIfhG3mBo6" IsHidden="true">
-                <Fragment Id="J65CZoYMN0UP7X3FUOhh0y" Patch="Eiu4NXcmQIlOwrj7KNQTGi" Enabled="true" />
-                <Fragment Id="V2vlJO5HIT6P2ORfmy8fbq" Patch="JQnuGndFZfYN3Y8diQ7QJJ" />
-              </ProcessDefinition>
-              <Slot Id="SQmtYahAaKpLgWWH6XO9aG" Name="Name">
-                <p:TypeAnnotation p:Type="TypeReference">
-                  <Choice Kind="TypeFlag" Name="String" />
-                </p:TypeAnnotation>
-              </Slot>
-              <Slot Id="VQwVhqzMrFRNBE7y6zky0O" Name="City">
-                <p:TypeAnnotation p:Type="TypeReference">
-                  <Choice Kind="TypeFlag" Name="String" />
-                </p:TypeAnnotation>
-              </Slot>
-              <Slot Id="Cs9731TbiwrLqYUZOAKLJN" Name="Age">
-                <p:TypeAnnotation p:Type="TypeReference">
-                  <Choice Kind="TypeFlag" Name="Integer32" />
-                </p:TypeAnnotation>
-              </Slot>
-              <Patch Id="JQnuGndFZfYN3Y8diQ7QJJ" Name="Split">
-                <Pin Id="A1GztuOTqiUQKqxICcEmwK" MergeId="510286" Name="Name" Kind="OutputPin" />
-                <Pin Id="CfkYwErHZktMdSfdRq9N8j" MergeId="510292" Name="City" Kind="OutputPin" />
-                <Pin Id="VyZPYaXmshSOpOJOE0qOBk" MergeId="510280" Name="Age" Kind="OutputPin" />
-              </Patch>
-              <Link Id="IytzWuWSTYgLeqj0N9qQgK" Ids="VV4oPiyGyQrO1hikHtfGwd,EZvuiMx0R37LY1zbGS73jQ" IsHidden="true" />
-              <Link Id="F6mCyw5qUZmQNeVMftsVuA" Ids="EZvuiMx0R37LY1zbGS73jQ,K5vKTSwL0RuNAD0Z13mPQF" />
-              <Link Id="C2Hh593FsZaMzhDpujAHxH" Ids="BUbsg2EQCZ5Qao6brr4Mcu,VyZPYaXmshSOpOJOE0qOBk" IsHidden="true" />
-              <Link Id="NZ8HNsZhywfL1CibUUzHYl" Ids="K5vKTSwL0RuNAD0Z13mPQF,BUbsg2EQCZ5Qao6brr4Mcu" />
-              <Link Id="AgkJ3kgAAGTN2q8kPGkwAp" Ids="C7mDbwbU4x0QOer08wgJet,VmsNjjgJdFMMGmL2QQPsjo" IsHidden="true" />
-              <Link Id="DRHPgM06wx9PGWpoIyfBRj" Ids="VmsNjjgJdFMMGmL2QQPsjo,B54JlJcVAKjLIAuyVsaBl6" />
-              <Link Id="R9717ZYco5SMbE9VACK3LJ" Ids="TJomsCXjovrMOd8tzpffyP,A1GztuOTqiUQKqxICcEmwK" IsHidden="true" />
-              <Link Id="BuDLtCARhPmNNRLxy7OEbA" Ids="B54JlJcVAKjLIAuyVsaBl6,TJomsCXjovrMOd8tzpffyP" />
-              <Link Id="QRBTm1j2ubrOn9RT3NYtwc" Ids="Tp7fOB5q5JXNofh6iQ8GzK,DclNpN6P1l0MNdK6iUazWu" IsHidden="true" />
-              <Link Id="HOA3n2e3uciLxI8d79pmzv" Ids="DclNpN6P1l0MNdK6iUazWu,DQ2tCAPgxz9MeBBFL1BvxO" />
-              <Link Id="FWHxSEAWwLNLPo7VCn8AHp" Ids="O0opJC5IglJNWBN1kZyVeO,CfkYwErHZktMdSfdRq9N8j" IsHidden="true" />
-              <Link Id="KOHLbeKsEKMOmZfdGbeOCy" Ids="DQ2tCAPgxz9MeBBFL1BvxO,O0opJC5IglJNWBN1kZyVeO" />
-            </Patch>
-          </Node>
-          <!--
-
-    ************************ Dog ************************
-
--->
-          <Node Name="Dog" Bounds="125,238" Id="A97FI3oNkxnN2BHKAolTtY">
-            <p:NodeReference>
-              <Choice Kind="ClassDefinition" />
-            </p:NodeReference>
-            <p:Interfaces>
-              <TypeReference LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
-                <Choice Kind="InterfaceTypeFlag" Name="IBeing" />
-              </TypeReference>
-            </p:Interfaces>
-            <Patch Id="J7CRwvxSaDGPPXf0e9rryV">
-              <Canvas Id="Jpmvp1P53Q9NGzF7Hnl8Dz" CanvasType="Group">
-                <Pad Id="R0QljgoMBs0O9MsM2R1jki" SlotId="ChaGBZIuhz2Pv1jhd4AuXi" Bounds="741,376" />
-                <ControlPoint Id="NIE1KCyCG3NOvx5lnhizJM" Bounds="741,346" />
-                <ControlPoint Id="QP2wyat7QPnMzGyht4khl8" Bounds="741,407" />
-              </Canvas>
-              <Patch Id="DlzhZKBu6FOMvYg8u2i9Q3" Name="Create">
-                <Pin Id="ClODHnEEOz9M1DgxUAkAvi" Name="Name" Kind="InputPin" />
-              </Patch>
-              <ProcessDefinition Id="LheosrUAybbMr30eY68nwp" IsHidden="true">
-                <Fragment Id="L4AuNCdsEPjO5S638dQ0ff" Patch="DlzhZKBu6FOMvYg8u2i9Q3" Enabled="true" />
-                <Fragment Id="UhcVeFglawELpH75MIjEes" Patch="QKiUNrWrvfkLEpOugDdocH" />
-              </ProcessDefinition>
-              <Slot Id="ChaGBZIuhz2Pv1jhd4AuXi" Name="Name">
-                <p:TypeAnnotation p:Type="TypeReference">
-                  <Choice Kind="TypeFlag" Name="String" />
-                </p:TypeAnnotation>
-              </Slot>
-              <Patch Id="QKiUNrWrvfkLEpOugDdocH" Name="Split">
-                <Pin Id="HBfbXAtLWh7OdDKD6mln9P" MergeId="453435" Name="Name" Kind="OutputPin" />
-              </Patch>
-              <Link Id="EWmP27iGdJWM6WuTYlaHpk" Ids="ClODHnEEOz9M1DgxUAkAvi,NIE1KCyCG3NOvx5lnhizJM" IsHidden="true" />
-              <Link Id="VmMt8lmKDuhPDtp67kkegn" Ids="NIE1KCyCG3NOvx5lnhizJM,R0QljgoMBs0O9MsM2R1jki" />
-              <Link Id="UG4tl5ec3cKQMcKu8NlJWQ" Ids="QP2wyat7QPnMzGyht4khl8,HBfbXAtLWh7OdDKD6mln9P" IsHidden="true" />
-              <Link Id="VKNEADM0MqrOvYZZuS8WDP" Ids="R0QljgoMBs0O9MsM2R1jki,QP2wyat7QPnMzGyht4khl8" />
-            </Patch>
-          </Node>
-          <Pad Id="TyHRlZg5xfjMv3sVvxEJpB" Bounds="535,241">
-            <p:TypeAnnotation LastCategoryFullName="Main" LastDependency="editable widget__channelsagai_n__.vl">
-              <Choice Kind="TypeFlag" Name="IBeing" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Node Bounds="533,296,53,19" Id="AOyaEpiSbq4N2j76LHHOgw">
-            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Channel" />
-            </p:NodeReference>
-            <Pin Id="DpPxBk2Zu0ZLuDAZLwdXbh" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="DDwGmmBL6UQQAZZ8Ebucge" Name="Initial Value" Kind="InputPin" IsHidden="true" />
-            <Pin Id="T054NacRQcKMiczAjuJKm9" Name="Value" Kind="InputPin" />
-            <Pin Id="NM8OKDOPMjdPbh3zx6EzO0" Name="Output" Kind="OutputPin" />
-            <Pin Id="AX85tx8f8QXMaNAp0tJ23N" Name="Value" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="533,259,39,19" Id="KI6nye1H3EeOHDo2olrvwd">
-            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
-              <Choice Kind="OperationCallFlag" Name="Cons" />
-            </p:NodeReference>
-            <Pin Id="IUgpZiJtv5VMplebU47woj" Name="Input" Kind="InputPin" />
-            <Pin Id="HiDpeWuB8A5MwXOKRzwshO" Name="Input 2" Kind="InputPin" />
-            <Pin Id="N1I8R9Elx0xNbvHhtrePjz" Name="Result" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="879,514,69,26" Id="ComvKye0XgoN3lsXRFL6nr">
-            <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widget__channelsagai_n__.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Main.WidgetContext" />
-              <Choice Kind="OperationCallFlag" Name="Create" />
-            </p:NodeReference>
-            <Pin Id="IrjLgPXYLTuL9kAhkcKCFm" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="CYbSXxf24OqO0Df1Gf7wkY" Name="Node Context" Kind="InputPin" IsHidden="true" />
-          </Node>
-          <Node Bounds="879,568,139,26" Id="VDwvR5iudnSL3YYwCqwxvo">
-            <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widget__channelsagai_n__.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Main.WidgetContext" />
-              <Choice Kind="OperationCallFlag" Name="SetSynchronizationContext" />
-            </p:NodeReference>
-            <Pin Id="JlXSlWMLyS5Lb50IkjfvBt" Name="Input" Kind="StateInputPin" />
-            <Pin Id="UNOEymfnOv9NIic4LHGFW4" Name="SynchronizationContext" Kind="InputPin" />
-            <Pin Id="Hr5mxTzFJmBLyAqC3nWxKy" Name="Output" Kind="StateOutputPin" />
-          </Node>
-          <Node Bounds="981,519,51,19" Id="FgDKBQ1lr6jPTDx1R1FIKp">
-            <p:NodeReference LastCategoryFullName="System.Threading.SynchronizationContext" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="SynchronizationContext" NeedsToBeDirectParent="true" />
-              <Choice Kind="OperationCallFlag" Name="Current" />
-            </p:NodeReference>
-            <Pin Id="ToPc9ZGoM5NMCcFDexYecO" Name="Current" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="608,182,46,26" Id="QJoL8PaAToIMDjW47NYqJx">
-            <p:NodeReference LastCategoryFullName="Main.Person" LastDependency="editable widgets.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Main.Person" />
-              <Choice Kind="OperationCallFlag" Name="Create" />
-            </p:NodeReference>
-            <Pin Id="FegBlvs07R5M59Pq6z32rL" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="RytXrhewzD9NPXvkvdJIei" Name="Name" Kind="InputPin" />
-            <Pin Id="KejcGopY3IuNSxnpMUhcRC" Name="City" Kind="InputPin" />
-            <Pin Id="FabLHQvGOUyMZUqMUG0VLg" Name="Age" Kind="InputPin" />
-            <Pin Id="DCmGB1tQ43hOWmC6lR2rSs" Name="Output" Kind="StateOutputPin" />
-          </Node>
-          <Pad Id="Gy4xaYgYYr9NsnUu3SlN4t" Comment="" Bounds="172,351,286,214" ShowValueBox="true" isIOBox="true" />
-        </Canvas>
-        <Patch Id="MYbygmoArgiNDIGYj2YVFJ" Name="Create" ParticipatingElements="O8oszcqFg18L6T4c6nmNd9" />
+        <Canvas Id="T7IPxPAnkdNQSc3qmi4E0c" CanvasType="Group" />
+        <Patch Id="MYbygmoArgiNDIGYj2YVFJ" Name="Create" />
         <Patch Id="VytMaUHeLO4NOXQfCKJ4Ui" Name="Update" />
         <ProcessDefinition Id="JhxfLciGBCZLzsAHMo20mw">
           <Fragment Id="UqFJnJRU8cHQNsERsaM8cF" Patch="MYbygmoArgiNDIGYj2YVFJ" Enabled="true" />
           <Fragment Id="Co4UpLT9LxSP4toVQSDeDv" Patch="VytMaUHeLO4NOXQfCKJ4Ui" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="PrPoBzjQfh9Mk1hyMYhWpE" Ids="MhSHAPcPl48OkCEKzJZFu0,AdokNYp9BN1PZG40UWYQIy" />
-        <Link Id="Gm1exPbx6P6NnyB0Vkjx8m" Ids="P85pzu9ftiHOsux98s3gNu,JoNqgz04VDeNejeVxwSxiO" />
-        <Link Id="VciFFxoeHtONmG6QcbYAlc" Ids="P85pzu9ftiHOsux98s3gNu,JM5F7qNKUOOOxc1W4rDBvd" />
-        <Link Id="VaLmxJ4yzJ4NJM16wF3N1P" Ids="O1aahbbhBj8QMOaA5hC89s,COzgeNY9LwCLyZ88ibdhOZ" />
-        <Link Id="DbpgmY0KmRbN3aaXDhtkR8" Ids="UP2l6zwZV6JO6M813OZUUg,AWNroRrmR2IPIumaM045K8" />
-        <Link Id="AJG0ks65lJrLZJUDSue34F" Ids="TyHRlZg5xfjMv3sVvxEJpB,IUgpZiJtv5VMplebU47woj" />
-        <Link Id="O8oszcqFg18L6T4c6nmNd9" Ids="N1I8R9Elx0xNbvHhtrePjz,T054NacRQcKMiczAjuJKm9" />
-        <Link Id="O2x4Yu96uRzMJZAA9CIiz0" Ids="IrjLgPXYLTuL9kAhkcKCFm,JlXSlWMLyS5Lb50IkjfvBt" />
-        <Link Id="I1YVTJpXckqN0r2XxpiqYl" Ids="ToPc9ZGoM5NMCcFDexYecO,UNOEymfnOv9NIic4LHGFW4" />
-        <Link Id="BKp8Q4ifdPNLlUKZy4UJk4" Ids="DCmGB1tQ43hOWmC6lR2rSs,HiDpeWuB8A5MwXOKRzwshO" />
-        <Link Id="SBfLzQu13IHPwtxmk5Dph5" Ids="NM8OKDOPMjdPbh3zx6EzO0,Gy4xaYgYYr9NsnUu3SlN4t" />
-        <Link Id="GE1V1Zc8SjILil8OndfxtF" Ids="NM8OKDOPMjdPbh3zx6EzO0,DhF7qsUVs3wMbOqvuStW6L" />
       </Patch>
     </Node>
   </Patch>
