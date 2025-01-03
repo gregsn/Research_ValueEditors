@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="A3MrLZEihvPOb3K5G4R41H" LanguageVersion="2024.6.7-0301-gd769b48db0" Version="0.128">
-  <NugetDependency Id="KeM6GyYfp1NLMdcxrWKv8S" Location="VL.CoreLib" IsFriend="true" Version="2024.6.7-0301-gd769b48db0" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="A3MrLZEihvPOb3K5G4R41H" LanguageVersion="2024.6.7-0305-g04c2aff42c" Version="0.128">
+  <NugetDependency Id="KeM6GyYfp1NLMdcxrWKv8S" Location="VL.CoreLib" IsFriend="true" Version="2024.6.7-0310-g6266ca42c1" />
   <Patch Id="OPTHzu3GjIGNfTrkvahywi">
     <Canvas Id="RveISoue0hDPMJRZ8Lcb3C" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
@@ -1344,7 +1344,6 @@
                           <Pin Id="N7MuBMVgG6UQdlwr6iNj8z" Name="Editor Context" Kind="InputPin" />
                         </Node>
                       </Patch>
-                      <Pin Id="QjgJeJTsRaEO0eX52Jpcek" Name="Strip" Kind="InputPin" />
                     </Node>
                     <Node Bounds="566,1043,47,26" Id="Ml7jqVmP5t6OVocB4GC8s1">
                       <p:NodeReference LastCategoryFullName="Primitive.Optional" LastDependency="VL.CoreLib.vl">
@@ -2278,7 +2277,7 @@
               <ControlPoint Id="SJT8Walvy7lN567CBTSVn4" Bounds="547,572" Alignment="Top" />
               <ControlPoint Id="M1eVYZmFBfiPn9uYs9eOyc" Bounds="546,1278" Alignment="Bottom" />
             </Node>
-            <Node Bounds="449,486,69,26" Id="VHYrpudqwpfLR4yLdKGkv5">
+            <Node Bounds="449,486,85,26" Id="VHYrpudqwpfLR4yLdKGkv5">
               <p:NodeReference LastCategoryFullName="Main.WidgetContext" LastDependency="editable widget____.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ClassType" Name="ValueEditorContext" />
@@ -4424,7 +4423,6 @@
                   </p:TypeAnnotation>
                 </Pad>
               </Patch>
-              <Pin Id="QDIfFdCGuvkLeMQrcVgz9y" Name="Strip" Kind="InputPin" />
             </Node>
             <Node Bounds="554,416,71,26" Id="OiiqN5fFcgyQaJcNMX3L1H">
               <p:NodeReference LastCategoryFullName="Primitive.Optional" LastDependency="VL.CoreLib.vl">
@@ -4717,7 +4715,7 @@
             </Node>
             <ControlPoint Id="GPn0BhZzf0VQJqzUcnpLGS" Bounds="633,166" />
             <ControlPoint Id="IZDW3rAxzwBOKofAslU0EN" Bounds="249,664" />
-            <Node Bounds="798,683,424,235" Id="DeVE8YoIwBDPmjCxvseXUd">
+            <Node Bounds="798,683,358,235" Id="DeVE8YoIwBDPmjCxvseXUd">
               <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -4784,7 +4782,6 @@
                     </Node>
                   </Patch>
                 </Node>
-                <Pad Id="Ee6xbvKtotsMKPLkf4vw2g" Comment="sub" Bounds="1105,835,98,68" ShowValueBox="true" />
               </Patch>
               <Pin Id="H5CMtRIFUCKOExYKakOYyq" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="FFTN7GV803yPkpo1TpAXQs" Name="Messages" Kind="InputPin" />
@@ -4845,11 +4842,10 @@
                   <Pin Id="FolHFD1aCieO37iznx6TVD" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="V1336PIkE4uO4kFIXkS6Es" Name="Value" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="443,731,80,19" Id="L8YvhBgb1wENhJZbTyovjh">
-                  <p:NodeReference LastCategoryFullName="VL.Lib.Primitive.Object.ObjectHelpers" LastDependency="VL.CoreLib.dll">
+                <Node Bounds="443,731,40,26" Id="L8YvhBgb1wENhJZbTyovjh">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <FullNameCategoryReference ID="VL.Lib.Primitive.Object.ObjectHelpers" />
-                    <Choice Kind="OperationCallFlag" Name="DEFAULT_NET" />
+                    <Choice Kind="OperationCallFlag" Name="NULL (OrDefault)" />
                   </p:NodeReference>
                   <Pin Id="V1l5ydRFmvLPqwdIN0HUQk" Name="Result" Kind="OutputPin" />
                 </Node>
@@ -4940,7 +4936,6 @@
           <Link Id="SnGgeehSsuyQX60PKzqqFT" Ids="OagdA3ZtKuvNIK3yGIY12z,QBovfn9xrcqPmjLm6WfX8R" />
           <Link Id="JI6D4saOymgPDoDfortuwF" Ids="IpObtQXwFSqOtDKSHSiQAg,OagdA3ZtKuvNIK3yGIY12z" IsHidden="true" />
           <Link Id="K5VNmScDtl0LrNpUHbaP1d" Ids="SPhyB8G88hTLM0ylC1Rwc0,OjO1JTDbxwpOtVWUDdiBtC" />
-          <Link Id="VSGMqvZiMlBNrgJKi8wOsA" Ids="Ef3tpm1wYdXOOgh3yegiTi,Ee6xbvKtotsMKPLkf4vw2g" />
         </Patch>
       </Node>
       <!--
@@ -5255,8 +5250,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="NAnlstrdlAPLRvfTtx5P96" Location="VL.ImGui" Version="2024.6.7-0301-gd769b48db0" />
-  <NugetDependency Id="KqBTjnUNEEKOxQpjYM3zVu" Location="VL.ImGui.Skia" Version="2024.6.7-0301-gd769b48db0" />
-  <NugetDependency Id="MNjYPiDQKtQLq1d3b2dgYe" Location="VL.Skia" Version="2024.6.7-0301-gd769b48db0" />
+  <NugetDependency Id="NAnlstrdlAPLRvfTtx5P96" Location="VL.ImGui" Version="2024.6.7-0310-g6266ca42c1" />
+  <NugetDependency Id="KqBTjnUNEEKOxQpjYM3zVu" Location="VL.ImGui.Skia" Version="2024.6.7-0310-g6266ca42c1" />
+  <NugetDependency Id="MNjYPiDQKtQLq1d3b2dgYe" Location="VL.Skia" Version="2024.6.7-0310-g6266ca42c1" />
   <PlatformDependency Id="OasWSdEf6ubNxmfavy2GCw" Location="VL.CoreLib.dll" />
 </Document>
