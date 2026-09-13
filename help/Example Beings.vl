@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="NMnUm6sn9KgLaSHjZbM6MB" Name="Bounds" Kind="InputPin" DefaultValue="1500, 500, 536, 728" />
+            <Pin Id="NMnUm6sn9KgLaSHjZbM6MB" Name="Bounds" Kind="InputPin" DefaultValue="1822, 189, 536, 728" />
             <Pin Id="DQ5nMYcmmCpPXCe0DzIPft" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="NJj1huucqr9PJjLjc8cRPI" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FbfbXv5oECEPg4n5GUoyNU" Name="Node Context" Kind="InputPin" IsHidden="true" />
